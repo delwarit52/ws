@@ -10,6 +10,8 @@ import RecentProject from "./components/Frontend/RecentProject/RecentProject";
 import Achievement from "./components/Frontend/Achievement/Achievement";
 import Review from "./components/Frontend/Review/Review";
 import HomeSlider from "./components/Frontend/Slider/HomeSlider";
+import TopBar from "./components/Frontend/TopMenu/TopBar";
+import SiteAnalytic from "./components/Frontend/SiteAnalytic/SiteAnalytic";
 
 
 
@@ -19,6 +21,7 @@ class App extends Component {
             <Fragment>
                 <TopMenu/>
                <HomeSlider/>
+               <SiteAnalytic/>
                 <HomeAboutUs/>
                 <Service/>
                 <Course/>

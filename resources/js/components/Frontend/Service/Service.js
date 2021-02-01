@@ -1,5 +1,5 @@
 import React, {Component,Fragment} from 'react';
-import {Button, Col, Container, Row} from "react-bootstrap";
+import {Button, Col, Container, Row,ButtonGroup,CardGroup,Card,CardImg} from "react-bootstrap";
 import graphics from '../../../../images/design.png'
 
 class Service extends Component {
@@ -53,6 +53,51 @@ class Service extends Component {
                             </div>
                         </Col>
                     </Row>
+
+                            <CardGroup>
+                                <Card>
+                                    <Card.Img variant="top" src={graphics} />
+                                    <Card.Body>
+                                        <Card.Title>Card title</Card.Title>
+                                        <Card.Text>
+                                            This is a wider card with supporting text below as a natural lead-in to
+                                            additional content. This content is a little bit longer.
+                                        </Card.Text>
+                                    </Card.Body>
+                                    <Card.Footer>
+                                        <small className="text-muted">Last updated 3 mins ago</small>
+                                    </Card.Footer>
+                                </Card>
+                                <Card>
+                                    <Card.Img variant="top" src="holder.js/100px160" />
+                                    <Card.Body>
+                                        <Card.Title>Card title</Card.Title>
+                                        <Card.Text>
+                                            This card has supporting text below as a natural lead-in to additional
+                                            content.{' '}
+                                        </Card.Text>
+                                    </Card.Body>
+                                    <Card.Footer>
+                                        <small className="text-muted">Last updated 3 mins ago</small>
+                                    </Card.Footer>
+                                </Card>
+                                <Card>
+                                    <Card.Img variant="top" src="holder.js/100px160" />
+                                    <Card.Body>
+                                        <Card.Title>Card title</Card.Title>
+                                        <Card.Text>
+                                            This is a wider card with supporting text below as a natural lead-in to
+                                            additional content. This card has even longer content than the first to
+                                            show that equal height action.
+                                        </Card.Text>
+                                    </Card.Body>
+                                    <Card.Footer>
+                                        <small className="text-muted">Last updated 3 mins ago</small>
+                                    </Card.Footer>
+                                </Card>
+                            </CardGroup>
+
+
                 </Container>
                 </section>
             </Fragment>

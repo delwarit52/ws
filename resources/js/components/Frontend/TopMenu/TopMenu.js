@@ -1,6 +1,7 @@
 import React, {Component,Fragment} from 'react';
 import {Nav, Navbar} from "react-bootstrap";
 import Logo from '../../../../images/logo.png'
+import TopBar from "./TopBar";
 
 class TopMenu extends Component {
     constructor() {
@@ -30,7 +31,8 @@ class TopMenu extends Component {
 
         return (
             <Fragment>
-                <Navbar className={this.state.topMenuClass} collapseOnSelect fixed={"top"} expand="lg"  variant="dark">
+                <TopBar/>
+                <Navbar className={this.state.topMenuClass} collapseOnSelect  expand="lg"  variant="dark">
                     <Navbar.Brand href="#home"><img src={Logo}/> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
