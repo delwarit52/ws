@@ -1,5 +1,6 @@
 import React, {Component,Fragment} from 'react';
-import {Col, Container, ListGroup, Row} from "react-bootstrap";
+import {Col, Container, Image, ListGroup, Row} from "react-bootstrap";
+import user from '../../../../images/priest.png'
 
 class SiteAnalytic extends Component {
     render() {
@@ -10,10 +11,26 @@ class SiteAnalytic extends Component {
                         <Row className="justify-content-md-center">
 
                             <Col md="auto"><ListGroup horizontal>
-                                <ListGroup.Item>This</ListGroup.Item>
-                                <ListGroup.Item>ListGroup</ListGroup.Item>
-                                <ListGroup.Item>renders</ListGroup.Item>
-                                <ListGroup.Item>horizontally!</ListGroup.Item>
+                                <ListGroup.Item className="text-center siteAnalyticItem">
+                                    <img src={user}/>
+                                    <h3>500+</h3>
+                                     <h4>Trained Student</h4>
+                                </ListGroup.Item>
+                                <ListGroup.Item className="text-center siteAnalyticItem">
+                                    <img src={user}/>
+                                    <h3>500+</h3>
+                                    <h4>Success Student</h4>
+                                </ListGroup.Item>
+                                <ListGroup.Item className="text-center siteAnalyticItem">
+                                    <img src={user}/>
+                                    <h3>500+</h3>
+                                    <h4>Trained Student</h4>
+                                </ListGroup.Item>
+                                <ListGroup.Item className="text-center siteAnalyticItem">
+                                    <img src={user}/>
+                                    <h3>500+</h3>
+                                    <h4>Trained Student</h4>
+                                </ListGroup.Item>
                             </ListGroup></Col>
 
                         </Row>

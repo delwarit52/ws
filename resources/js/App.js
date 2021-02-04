@@ -12,6 +12,7 @@ import Review from "./components/Frontend/Review/Review";
 import HomeSlider from "./components/Frontend/Slider/HomeSlider";
 import TopBar from "./components/Frontend/TopMenu/TopBar";
 import SiteAnalytic from "./components/Frontend/SiteAnalytic/SiteAnalytic";
+import Footer from "./components/Frontend/Footer/Footer";
 
 
 
@@ -29,6 +30,7 @@ class App extends Component {
                 <RecentProject/>
                 <Achievement/>
                 <Review/>
+                <Footer/>
             </Fragment>
         );
     }
