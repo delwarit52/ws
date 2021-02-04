@@ -24,12 +24,12 @@ class SiteAnalytic extends Component {
                                 <ListGroup.Item className="text-center siteAnalyticItem">
                                     <img src={user}/>
                                     <h3>500+</h3>
-                                    <h4>Trained Student</h4>
+                                    <h4>Job Replacement</h4>
                                 </ListGroup.Item>
                                 <ListGroup.Item className="text-center siteAnalyticItem">
                                     <img src={user}/>
                                     <h3>500+</h3>
-                                    <h4>Trained Student</h4>
+                                    <h4>Expart Mentor</h4>
                                 </ListGroup.Item>
                             </ListGroup></Col>
 

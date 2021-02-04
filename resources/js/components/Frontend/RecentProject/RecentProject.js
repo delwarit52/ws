@@ -1,23 +1,11 @@
 import React, {Component,Fragment} from 'react';
 import {Button, Col, Container, Row} from "react-bootstrap";
 import graphics from "../../../../images/design.png";
+import web from "../../../../images/slider2.jpg"
+import web2 from "../../../../images/web2.jpg"
 
 class RecentProject extends Component {
-    constructor() {
-        super();
-        this.state={
-            proOverlay:'beforeMouse'
-        }
-        this.onMouseProject=this.onMouseProject.bind(this)
-        this.onMouseOutProject=this.onMouseOutProject.bind(this)
-    }
 
-    onMouseProject(){
-       this.setState({proOverlay:'afterMouse'})
-    }
-    onMouseOutProject(){
-        this.setState({proOverlay:'beforeMouse'})
-    }
     render() {
         return (
             <Fragment>
@@ -31,23 +19,58 @@ class RecentProject extends Component {
                             </Col>
                         </Row>
                         <Row className={"recentProjectRow"}>
-                            <Col lg={4} md={6} sm={12}>
-
-                            </Col>
-                            <Col lg={4} md={6} sm={12}>
-                                <div className="recentProject text-center"  onMouseOver={this.onMouseProject}>
+                            <Col lg={6} md={6} sm={12} className="p-0">
+                                <a href={"#"}>
                                     <div className="recentProjectImg">
-                                        <img src={graphics}/>
+                                        <img src={web}/>
                                     </div>
 
-                                    <div className={'recentProjectContent ' +this.state.proOverlay} onMouseOut={this.onMouseOutProject}>
-                                        <h3>Graphics</h3>
-                                        <Button className="btn btn-primary">Visit Website</Button>
+                                    <div className={'recentProjectContent'}>
+                                        <h3>Moder Realestate</h3>
+                                        <p>SilverSlide is a modern, sleek theme best suitable for personal portfolio
+                                            website – aimed towards designers,</p>
                                     </div>
+                                </a>
 
-                                </div>
+
                             </Col>
-                            <Col lg={4} md={6} sm={12}>
+                            <Col lg={6} md={6} sm={12} className="p-0">
+                                <div className="recentProjectImg">
+                                    <img src={web2}/>
+                                </div>
+
+                                <div className={'recentProjectContent'}>
+                                    <h3>Graphics</h3>
+                                    <Button className="btn btn-primary">Visit Website</Button>
+                                </div>
+
+                            </Col>
+
+                            <Col lg={6} md={6} sm={12} className="p-0">
+                                <div className="recentProjectImg">
+                                    <img src={web2}/>
+                                </div>
+
+                                <div className={'recentProjectContent'}>
+                                    <h3>Graphics</h3>
+                                    <Button className="btn btn-primary">Visit Website</Button>
+                                </div>
+
+                            </Col>
+
+                            <Col lg={6} md={6} sm={12} className="p-0">
+                                <a href={"#"}>
+                                    <div className="recentProjectImg">
+                                        <img src={web}/>
+                                    </div>
+
+                                    <div className={'recentProjectContent'}>
+                                        <h3>Moder Realestate</h3>
+                                        <p>SilverSlide is a modern, sleek theme best suitable for personal portfolio
+                                            website – aimed towards designers,</p>
+                                    </div>
+                                </a>
+
 
                             </Col>
 

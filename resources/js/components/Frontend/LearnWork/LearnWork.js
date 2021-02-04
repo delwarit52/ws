@@ -1,5 +1,7 @@
 import React, {Component,Fragment} from 'react';
-import {Col, Container, Row} from "react-bootstrap";
+import {Button, Col, Container, Row} from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faCoffee, faHandPointRight, faPlayCircle} from '@fortawesome/free-solid-svg-icons'
 
 class LearnWork extends Component {
     render() {
@@ -14,21 +16,27 @@ class LearnWork extends Component {
                                 <Col>
                                     <div className="learnWorkTeam text-center">
                                         <h3>400</h3>
-                                        <h2>Total Course</h2>
+                                        <h2>Complete Project</h2>
                                     </div>
 
                                 </Col>
                                 <Col>
                                     <div className="learnWorkTeam text-center">
                                         <h3>400</h3>
-                                        <h2>Total Student</h2>
+                                        <h2>Total Client</h2>
                                     </div>
 
                                 </Col>
                                 <Col>
-                                    <div className="learnWorkTeam text-center">
-                                        <h3>400</h3>
-                                        <h2>Total Project</h2>
+                                    <div className="learnHowWork">
+                                        <h3>How i Work</h3>
+                                       <ul>
+                                           <li> <FontAwesomeIcon icon={faHandPointRight} /> <span>Requirement Gathering</span></li>
+                                           <li> <FontAwesomeIcon icon={faHandPointRight} /> <span>Requirement Gathering</span></li>
+                                           <li> <FontAwesomeIcon icon={faHandPointRight} /> <span>Requirement Gathering</span></li>
+
+
+                                       </ul>
                                     </div>
 
                                 </Col>

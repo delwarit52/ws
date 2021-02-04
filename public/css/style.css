@@ -12,7 +12,7 @@
 }
 
 .sectionMarginPadding{
-    margin-top: 30px;
+    margin-top: 50px;
     padding: 40px;
 }
 
@@ -197,6 +197,21 @@
     color: #ffffff;
 }
 
+.learnHowWork{
+    background: #ffffff;
+    text-align: left;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.learnHowWork ul{
+
+    margin:0px;
+    list-style: none;
+    text-align: left;
+    padding: 0px;
+}
+
 /*Recent Project*/
 .recentProject{
     padding: 15px 10px;
@@ -206,7 +221,7 @@
 
 .recentProjectImg img{
     width:100%;
-    max-width: 250px;
+    max-height: 350px;
 }
 .recentProjectContent{
 
@@ -219,19 +234,6 @@ left: 0px;
 
 }
 
-.beforeMouse{
-    visibility: hidden;
-    background: rgba(0,0,0,.0);
-    transition: all .5s;
-
-}
-.afterMouse{
-
-    visibility: visible;
-    background: rgba(0,0,0,.6);
-    transition: all .5s;
-
-}
 .recentProjectContent h3{
     margin-top: 90px;
     margin-bottom: 15px;
