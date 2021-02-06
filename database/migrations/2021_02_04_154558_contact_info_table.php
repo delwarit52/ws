@@ -14,6 +14,8 @@ class ContactInfoTable extends Migration
     public function up()
     {
         Schema::create('contact_info', function (Blueprint $table) {
+            $table->increments('contact_info_id');
+            $table->string('mobile');
             $table->timestamp('created_at')->nullable();
         });
     }

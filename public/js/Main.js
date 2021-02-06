@@ -12795,13 +12795,13 @@ var TopBar = /*#__PURE__*/function (_Component) {
                 md: 4,
                 sm: 4,
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                  className: "topBarMobile",
+                  className: "topBarMobile topBarCommon text-center",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
-                    className: "topBarMobileIcon",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
                       icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faPhone
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+                    className: "topBarMobileIcon ml-1",
                     children: "01315807050"
                   })]
                 })
@@ -12810,13 +12810,13 @@ var TopBar = /*#__PURE__*/function (_Component) {
                 md: 4,
                 sm: 4,
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                  className: "topBarAddress",
+                  className: "topBarAddress topBarCommon text-center",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
-                    className: "topBarMobileIcon",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
                       icon: _fortawesome_free_solid_svg_icons_faMapMarkerAlt__WEBPACK_IMPORTED_MODULE_7__.faMapMarkerAlt
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+                    className: "topBarAddressIcon ml-1",
                     children: "Blue water,5th floor"
                   })]
                 })
@@ -12825,13 +12825,13 @@ var TopBar = /*#__PURE__*/function (_Component) {
                 md: 4,
                 sm: 4,
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                  className: "topBarWorkTime",
+                  className: "topBarWorkTime topBarCommon text-center",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
-                    className: "topBarMobileIcon",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
                       icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faClock
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+                    className: "topBarClockIcon ml-1",
                     children: "10.00 AM - 9.00 PM"
                   })]
                 })

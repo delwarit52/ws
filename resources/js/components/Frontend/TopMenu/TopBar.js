@@ -20,21 +20,21 @@ class TopBar extends Component {
                     <Container>
                         <Row>
                             <Col lg={3} md={4} sm={4}>
-                                <div className={"topBarMobile"}>
-                                    <span className={"topBarMobileIcon"}><FontAwesomeIcon  icon={faPhone} /></span><span>01315807050</span>
+                                <div className={"topBarMobile topBarCommon text-center"}>
+                                    <span ><FontAwesomeIcon  icon={faPhone} /></span><span className={"topBarMobileIcon ml-1"}>01315807050</span>
 
                                 </div>
                             </Col>
                             <Col lg={6} md={4} sm={4}>
-                                <div className={"topBarAddress"}>
+                                <div className={"topBarAddress topBarCommon text-center"}>
 
-                                    <span className={"topBarMobileIcon"}><FontAwesomeIcon  icon={faMapMarkerAlt} /></span><span>Blue water,5th floor</span>
+                                    <span ><FontAwesomeIcon  icon={faMapMarkerAlt} /></span><span className={"topBarAddressIcon ml-1"}>Blue water,5th floor</span>
 
                                 </div>
                             </Col>
                             <Col lg={3} md={4} sm={4}>
-                                <div className={"topBarWorkTime"}>
-                                    <span className={"topBarMobileIcon"}><FontAwesomeIcon  icon={faClock} /></span><span>10.00 AM - 9.00 PM</span>
+                                <div className={"topBarWorkTime topBarCommon text-center"}>
+                                    <span ><FontAwesomeIcon  icon={faClock} /></span><span className={"topBarClockIcon ml-1"}>10.00 AM - 9.00 PM</span>
                                 </div>
                             </Col>
                         </Row>

@@ -19,6 +19,19 @@
 
 
 
+/*TopBar css*/
+.topBarSection{
+    background: #000000;
+    padding: 5px;
+}
+.topBarCommon{
+    color: #8fbfff;
+}
+.topBarMobileIcon, .topBarAddressIcon ,.topBarClockIcon{
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
 
 
 /*Top menu css*/
@@ -35,10 +48,16 @@
     background: #ffffff;
     box-shadow: 0px 1px 5px #a24cf1;
     transition: all .5s;
+    position: fixed !important;
+    z-index: 99999;
+    width: 100%;
+    top: 0px;
 }
 .topMenuLink{
     color:#fff !important;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 .topMenuLinkScroll{
@@ -65,8 +84,21 @@
     box-shadow: 1px 1px 5px blue;
     box-shadow: 0px 0px 4px #8fa7ff;
 }
+.siteAnalyticItem h4{
+    font-family: 'Montserrat', sans-serif;
+    color: #2c2c2c;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.siteAnalyticItem h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #888888;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 20px 0px 10px 0px;
+}
 .siteAnalyticItem:hover{
-    transform: scale(1, 1.5);
+    transform: scale(1.2, 1.2);
     transition: ease-out .5s;
     z-index: 1;
 }
@@ -74,10 +106,6 @@
 .siteAnalyticItem img{
     width: 60px;
     height: 60px;
-}
-.siteAnalyticItem h3{
-    font-size: 18px;
-    margin-top: 10px;
 }
 
 
