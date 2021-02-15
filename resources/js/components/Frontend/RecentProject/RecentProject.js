@@ -35,26 +35,31 @@ class RecentProject extends Component {
 
                             </Col>
                             <Col lg={6} md={6} sm={12} className="p-0">
-                                <div className="recentProjectImg">
-                                    <img src={web2}/>
-                                </div>
+                                <a href={"#"}>
+                                    <div className="recentProjectImg">
+                                        <img src={web2}/>
+                                    </div>
 
-                                <div className={'recentProjectContent'}>
-                                    <h3>Graphics</h3>
-                                    <Button className="btn btn-primary">Visit Website</Button>
-                                </div>
-
+                                    <div className={'recentProjectContent'}>
+                                        <h3>Moder Realestate</h3>
+                                        <p>SilverSlide is a modern, sleek theme best suitable for personal portfolio
+                                            website – aimed towards designers,</p>
+                                    </div>
+                                </a>
                             </Col>
 
                             <Col lg={6} md={6} sm={12} className="p-0">
-                                <div className="recentProjectImg">
-                                    <img src={web2}/>
-                                </div>
+                                <a href={"#"}>
+                                    <div className="recentProjectImg">
+                                        <img src={web2}/>
+                                    </div>
 
-                                <div className={'recentProjectContent'}>
-                                    <h3>Graphics</h3>
-                                    <Button className="btn btn-primary">Visit Website</Button>
-                                </div>
+                                    <div className={'recentProjectContent'}>
+                                        <h3>Moder Realestate</h3>
+                                        <p>SilverSlide is a modern, sleek theme best suitable for personal portfolio
+                                            website – aimed towards designers,</p>
+                                    </div>
+                                </a>
 
                             </Col>
 

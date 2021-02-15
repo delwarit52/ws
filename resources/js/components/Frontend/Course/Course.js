@@ -54,7 +54,7 @@ class Course extends Component {
                     <Row>
                         <Col lg={6}>
                             <Row>
-                                <Col lg={4} md={6} sm={12} className="p-0">
+                                <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
                                     <a href="#">
                                         <div className={"courseItemList text-center"}>
                                             <Image src={design}></Image>
@@ -62,7 +62,7 @@ class Course extends Component {
                                         </div>
                                     </a>
                                 </Col>
-                                <Col lg={4} md={6} sm={12} className="p-0">
+                                <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
                                     <a href="#">
                                         <div className={"courseItemList text-center"}>
                                             <Image src={design}></Image>
@@ -70,7 +70,7 @@ class Course extends Component {
                                         </div>
                                     </a>
                                 </Col>
-                                <Col lg={4} md={6} sm={12} className="p-0">
+                                <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
                                     <a href="#">
                                         <div className={"courseItemList text-center"}>
                                             <Image src={design}></Image>
@@ -78,7 +78,7 @@ class Course extends Component {
                                         </div>
                                     </a>
                                 </Col>
-                                <Col lg={4} md={6} sm={12} className="p-0">
+                                <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
                                     <a href="#">
                                         <div className={"courseItemList text-center"}>
                                             <Image src={design}></Image>
@@ -86,46 +86,31 @@ class Course extends Component {
                                         </div>
                                     </a>
                                 </Col>
-                                <Col lg={4} md={6} sm={12} className="p-0">
-                                    <a href="#">
-                                        <div className={"courseItemList text-center"}>
-                                            <Image src={design}></Image>
-                                            <h3>Web Development </h3>
-                                        </div>
-                                    </a>
-                                </Col>
-                                <Col lg={4} md={6} sm={12} className="p-0">
-                                    <a href="#">
-                                        <div className={"courseItemList text-center"}>
-                                            <Image src={design}></Image>
-                                            <h3>Web Development </h3>
-                                        </div>
-                                    </a>
-                                </Col>
+
                             </Row>
                         </Col>
                         <Col>
                             <div className="courseSlider">
                                 <Slider {...settings}>
-                                    <div className={"review text-left"}>
+                                    <div className={"courseListSlide text-left"}>
+                                        <h2>Basic Web Design</h2>
+                                        <p>Individually import icons just once in an init module - there’s no need
+                                            to import the icons into each component once they’ve been added to the library...</p>
+                                        <Button className="btnGadiant">See More</Button>
+                                    </div>
+                                    <div className={"courseListSlide text-left"}>
                                         <h2>Basic Web Design</h2>
                                         <p>Individually import icons just once in an init module - there’s no need
                                             to import the icons into each component once they’ve been added to the library...</p>
                                         <Button>See More</Button>
                                     </div>
-                                    <div className={"review text-left"}>
+                                    <div className={"courseListSlide text-left"}>
                                         <h2>Basic Web Design</h2>
                                         <p>Individually import icons just once in an init module - there’s no need
                                             to import the icons into each component once they’ve been added to the library...</p>
                                         <Button>See More</Button>
                                     </div>
-                                    <div className={"review text-left"}>
-                                        <h2>Basic Web Design</h2>
-                                        <p>Individually import icons just once in an init module - there’s no need
-                                            to import the icons into each component once they’ve been added to the library...</p>
-                                        <Button>See More</Button>
-                                    </div>
-                                    <div className={"review text-left"}>
+                                    <div className={"courseListSlide text-left"}>
                                         <h2>Basic Web Design</h2>
                                         <p>Individually import icons just once in an init module - there’s no need
                                             to import the icons into each component once they’ve been added to the library...</p>

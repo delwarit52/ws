@@ -35,44 +35,54 @@ class Service extends Component {
                             </a>
                         </Col>
                         <Col lg={3} className="serviceItemCol p-0">
-                            <div className="serviceItem">
-                                <Image src={graphics}></Image>
-                                <h3>Graphics Design</h3>
-                            </div>
+                            <a href="#">
+                                <div className="serviceItem">
+                                    <Image src={graphics}></Image>
+                                    <h3>Banner/Logo/Web</h3>
+                                </div>
+                            </a>
                         </Col>
                         <Col lg={3} className="serviceItemCol p-0">
-                            <div className="serviceItem">
-                                <Image src={graphics}></Image>
-                                <h3>Graphics Design</h3>
-                            </div>
+                            <a href="#">
+                                <div className="serviceItem">
+                                    <Image src={graphics}></Image>
+                                    <h3>Banner/Logo/Web</h3>
+                                </div>
+                            </a>
                         </Col>
                         <Col lg={3} className="serviceItemCol p-0">
-                            <div className="serviceItem">
-                                <Image src={graphics}></Image>
-                                <h3>Graphics Design</h3>
-                            </div>
+                            <a href="#">
+                                <div className="serviceItem">
+                                    <Image src={graphics}></Image>
+                                    <h3>Banner/Logo/Web</h3>
+                                </div>
+                            </a>
                         </Col>
                         <Col lg={3} className="serviceItemCol p-0">
-                            <div className="serviceItem">
-                                <Image src={graphics}></Image>
-                                <h3>Graphics Design</h3>
-                            </div>
+                            <a href="#">
+                                <div className="serviceItem">
+                                    <Image src={graphics}></Image>
+                                    <h3>Banner/Logo/Web</h3>
+                                </div>
+                            </a>
                         </Col>
                         <Col lg={3} className="serviceItemCol p-0">
-                            <div className="serviceItem">
-                                <Image src={graphics}></Image>
-                                <h3>Graphics Design</h3>
-                            </div>
+                            <a href="#">
+                                <div className="serviceItem">
+                                    <Image src={graphics}></Image>
+                                    <h3>Banner/Logo/Web</h3>
+                                </div>
+                            </a>
                         </Col>
                         <Col lg={3} className="serviceItemCol p-0">
-                            <div className="serviceItem">
-                                <Image src={graphics}></Image>
-                                <h3>Graphics Design</h3>
-                            </div>
+                            <a href="#">
+                                <div className="serviceItem">
+                                    <Image src={graphics}></Image>
+                                    <h3>Banner/Logo/Web</h3>
+                                </div>
+                            </a>
                         </Col>
                     </Row>
-
-
 
                 </Container>
                 </section>
