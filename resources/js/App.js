@@ -13,6 +13,14 @@ import HomeSlider from "./components/Frontend/Slider/HomeSlider";
 import TopBar from "./components/Frontend/TopMenu/TopBar";
 import SiteAnalytic from "./components/Frontend/SiteAnalytic/SiteAnalytic";
 import Footer from "./components/Frontend/Footer/Footer";
+import HomePage from "./pages/Frontend/HomePage";
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 
 
@@ -20,17 +28,7 @@ class App extends Component {
     render() {
         return (
             <Fragment>
-                <TopMenu/>
-               <HomeSlider/>
-               <SiteAnalytic/>
-                <HomeAboutUs/>
-                <Service/>
-                <Course/>
-                <LearnWork/>
-                <RecentProject/>
-                <Achievement/>
-                <Review/>
-                <Footer/>
+                <HomePage/>
             </Fragment>
         );
     }

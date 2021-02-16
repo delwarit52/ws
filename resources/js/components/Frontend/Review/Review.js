@@ -61,35 +61,35 @@ class Review extends Component {
                         <Row>
                             <Col>
                                 <Slider {...settings}>
-                                    <div className={"review text-center mt-5"}>
+                                    <div className={"review text-center mt-1"}>
                                         <Image src={student1} roundedCircle />
                                         <h2>Salam</h2>
                                         <p>Individually import icons just once in an init module - there’s no need
                                             to import the icons into each component once they’ve been added to the library.</p>
                                         <h5> - Web Developer</h5>
                                     </div>
-                                    <div className={"review text-center mt-5"}>
+                                    <div className={"review text-center mt-1"}>
                                         <Image src={student1} roundedCircle />
                                         <h2>Salam</h2>
                                         <p>Individually import icons just once in an init module - there’s no need
                                             to import the icons into each component once they’ve been added to the library.</p>
                                         <h5> - Web Developer</h5>
                                     </div>
-                                    <div className={"review text-center mt-5"}>
+                                    <div className={"review text-center mt-1"}>
                                         <Image src={student1} roundedCircle />
                                         <h2>Salam</h2>
                                         <p>Individually import icons just once in an init module - there’s no need
                                             to import the icons into each component once they’ve been added to the library.</p>
                                         <h5> - Web Developer</h5>
                                     </div>
-                                    <div className={"review text-center mt-5"}>
+                                    <div className={"review text-center mt-1"}>
                                         <Image src={student1} roundedCircle />
                                         <h2>Salam</h2>
                                         <p>Individually import icons just once in an init module - there’s no need
                                             to import the icons into each component once they’ve been added to the library.</p>
                                         <h5> - Web Developer</h5>
                                     </div>
-                                    <div className={"review text-center mt-5"}>
+                                    <div className={"review text-center mt-1"}>
                                         <Image src={student1} roundedCircle />
                                         <h2>Salam</h2>
                                         <p>Individually import icons just once in an init module - there’s no need

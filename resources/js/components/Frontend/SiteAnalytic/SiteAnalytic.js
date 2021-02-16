@@ -10,28 +10,35 @@ class SiteAnalytic extends Component {
                     <Container>
                         <Row className="justify-content-md-center">
 
-                            <Col md="auto"><ListGroup horizontal>
-                                <ListGroup.Item className="text-center siteAnalyticItem">
+                            <Col className={"siteAnalyticCol p-0"}>
+                                <div className="text-center siteAnalyticItem">
                                     <img src={user}/>
                                     <h3>500+</h3>
                                      <h4>Trained Student</h4>
-                                </ListGroup.Item>
-                                <ListGroup.Item className="text-center siteAnalyticItem">
+                                </div>
+                            </Col>
+                            <Col className={"siteAnalyticCol p-0"}>
+                                <div className="text-center siteAnalyticItem">
                                     <img src={user}/>
                                     <h3>500+</h3>
                                     <h4>Success Student</h4>
-                                </ListGroup.Item>
-                                <ListGroup.Item className="text-center siteAnalyticItem">
-                                    <img src={user}/>
-                                    <h3>500+</h3>
-                                    <h4>Job Replacement</h4>
-                                </ListGroup.Item>
-                                <ListGroup.Item className="text-center siteAnalyticItem">
+                                </div>
+                            </Col>
+                            <Col className={"siteAnalyticCol p-0"}>
+                                  <div className="text-center siteAnalyticItem">
+                                      <img src={user}/>
+                                      <h3>500+</h3>
+                                      <h4>Job Replacement</h4>
+                                  </div>
+                            </Col>
+
+                            <Col className={"siteAnalyticCol p-0"}>
+                                <div className="text-center siteAnalyticItem">
                                     <img src={user}/>
                                     <h3>500+</h3>
                                     <h4>Expart Mentor</h4>
-                                </ListGroup.Item>
-                            </ListGroup></Col>
+                                </div>
+                            </Col>
 
                         </Row>
 

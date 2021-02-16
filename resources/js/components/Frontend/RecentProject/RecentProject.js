@@ -19,7 +19,7 @@ class RecentProject extends Component {
                             </Col>
                         </Row>
                         <Row className={"recentProjectRow"}>
-                            <Col lg={6} md={6} sm={12} className="p-0">
+                            <Col lg={6} md={6} sm={12} className="recentProjectCol p-0">
                                 <a href={"#"}>
                                     <div className="recentProjectImg">
                                         <img src={web}/>
@@ -32,9 +32,8 @@ class RecentProject extends Component {
                                     </div>
                                 </a>
 
-
                             </Col>
-                            <Col lg={6} md={6} sm={12} className="p-0">
+                            <Col lg={6} md={6} sm={12} className="recentProjectCol p-0">
                                 <a href={"#"}>
                                     <div className="recentProjectImg">
                                         <img src={web2}/>
@@ -48,7 +47,7 @@ class RecentProject extends Component {
                                 </a>
                             </Col>
 
-                            <Col lg={6} md={6} sm={12} className="p-0">
+                            <Col lg={6} md={6} sm={12} className="recentProjectCol p-0">
                                 <a href={"#"}>
                                     <div className="recentProjectImg">
                                         <img src={web2}/>
@@ -63,7 +62,7 @@ class RecentProject extends Component {
 
                             </Col>
 
-                            <Col lg={6} md={6} sm={12} className="p-0">
+                            <Col lg={6} md={6} sm={12} className="recentProjectCol p-0">
                                 <a href={"#"}>
                                     <div className="recentProjectImg">
                                         <img src={web}/>

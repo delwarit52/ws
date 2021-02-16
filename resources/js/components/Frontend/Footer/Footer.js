@@ -17,7 +17,7 @@ class Footer extends Component {
                                     </div>
                                 </Col>
                                 <Col lg={3} md={6} sm={12}>
-                                    <div className="footerPart2 text-center">
+                                    <div className="footerPart2 footerTittle">
                                        <h3>Our Course</h3>
                                         <p><a href={"#"}>Web Design</a></p>
                                         <p><a href={"#"}>Web Development</a></p>
@@ -28,7 +28,7 @@ class Footer extends Component {
                                 </Col>
 
                                 <Col lg={3} md={6} sm={12}>
-                                    <div className="footerPart4 text-center">
+                                    <div className="footerPart4 footerTittle">
                                         <h3>Service</h3>
                                         <p><a href={"#"}>Graphics</a></p>
                                         <p><a href={"#"}>Web Development</a></p>
@@ -39,7 +39,7 @@ class Footer extends Component {
                                 </Col>
 
                                 <Col lg={3} md={6} sm={12}>
-                                    <div className="footerPart3 text-center">
+                                    <div className="footerPart3 footerTittle">
                                         <h3>Contact us</h3>
                                         <p>
                                             11 Bir Uttam AK Khandakar Road, 31 Mohakhali Commercial Area, Colombia Super Market, 4th Floor, Wireless Gate, 1213
@@ -56,6 +56,17 @@ class Footer extends Component {
                             </Row>
                         </Container>
                     </Fragment>
+                </section>
+                <section className="copyRight">
+                    <Container>
+                        <Row>
+                            <Col>
+                                <div className="copyRightContent text-center">
+                                    <h3>&copy; Copyright DelwarIT- 2021</h3>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
                 </section>
             </footer>
 

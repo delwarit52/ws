@@ -86,6 +86,8 @@
 }
 .siteAnalyticItem{
     box-shadow: 0px 0px 4px #8fa7ff;
+    background: #ffffff;
+    padding:20px 0px;
 }
 .siteAnalyticItem h4{
     font-family: 'Montserrat', sans-serif;
@@ -100,10 +102,11 @@
     font-size: 20px;
     margin: 20px 0px 10px 0px;
 }
-.siteAnalyticItem:hover{
-    transform: scale(1.2, 1.2);
+.siteAnalyticCol:hover{
+    transform: scale(1.1, 1.1);
     transition: ease-out .5s;
-    z-index: 1;
+    z-index: 1 !important;
+    cursor:pointer;
 }
 
 .siteAnalyticItem img{
@@ -245,6 +248,7 @@
     font-weight: 100;
     font-family: 'Montserrat', sans-serif;
     color: #8E2DE2;
+    font-size: 25px;
 }
 .courseListSlide p{
     font-weight: 500;
@@ -335,9 +339,9 @@
     padding: 0px 15px;
 }
 
-.recentProject:hover{
-    transform: scale(1.055, 1.055);
-    transition: ease-out .5s;
+.recentProjectCol:hover{
+    transform: scale(.9, .9);
+    transition: ease-out .3s;
     z-index: 1;
 }
 
@@ -349,10 +353,26 @@
     font-size: 20px;
 }
 
+.recentProjectContent p{
+    color:#ffffff;
+}
+
 /*Achievement css*/
 
 .achievementSection{
     background: #f9f9f9;
+    padding: 60px 0px;
+}
+
+.achievement h2{
+    color: #8E2DE2;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.achievement p{
+    margin-bottom: 30px;
 }
 
 .video-react .video-react-big-play-button {
@@ -372,6 +392,7 @@
 
 .review{
     padding-left: 10px;
+    margin-top: 5px !important;
 }
 
 .review img{
@@ -382,7 +403,67 @@
     margin: 0px auto;
 }
 
+
+.review h2 {
+    margin-top: 25px;
+    color: #888;
+    font-family: 'Montserrat',sans-serif;
+}
+.footer{
+margin-top: 70px;
+}
+
+.footerTittle h3{
+color:#fff;
+font-family: 'Montserrat',sans-serif;
+margin-bottom: 20px;
+}
+
 .footerTop{
     background: cornflowerblue;
-    padding: 20px 0px;
+    padding: 60px 0px;
+}
+
+.footerPart2 p{
+    text-align: left;
+}
+
+.footerPart2 p a{
+    color:#ffffff;
+    text-align: left;
+}
+
+.footerPart4 p{
+    text-align: left;
+}
+
+.footerPart4 p a{
+    color:#ffffff;
+    text-align: left;
+}
+
+.footerPart3 p{
+    text-align: left;
+    color:#FFF;
+}
+
+.footerPart1 img{
+    margin-top:40px;
+}
+
+.footerPart1 h5{
+    text-transform:uppercase;
+    color:#fff;
+    font-size: 14px;
+}
+
+.copyRight{
+    background-color: rgb(93, 93, 253);
+    padding: 10px 0px;
+
+}
+.copyRight h3{
+    color:#ffffff;
+    font-size: 20px;
+    font-family: 'Montserrat',sans-serif;
 }
