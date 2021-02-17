@@ -19,17 +19,18 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link, BrowserRouter
 } from "react-router-dom";
-
+import AppRoute from "./route/AppRoute";
+import AboutPage from "./pages/Frontend/AboutPage";
 
 
 class App extends Component {
     render() {
         return (
-            <Fragment>
-                <HomePage/>
-            </Fragment>
+            <BrowserRouter>
+               <AppRoute/>
+            </BrowserRouter>
         );
     }
 }

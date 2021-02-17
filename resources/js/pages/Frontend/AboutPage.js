@@ -1,10 +1,15 @@
 import React, {Component,Fragment} from 'react';
+import TopBar from "../../components/Frontend/TopMenu/TopBar";
+import TopMenu from "../../components/Frontend/TopMenu/TopMenu";
+import AboutPageComponent from "../../components/Frontend/AboutPageComponent/AboutPageComponent";
 
 class AboutPage extends Component {
+
     render() {
         return (
             <Fragment>
-                <h1>About Page</h1>
+               <AboutPageComponent name={this.props.title}/>
+
             </Fragment>
         );
     }

@@ -409,6 +409,59 @@
     color: #888;
     font-family: 'Montserrat',sans-serif;
 }
+
+
+/*page Top Banner css*/
+
+
+.pageTopBanner{
+    position: relative;
+}
+.pageTopBannerTitle{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 200px;
+    background:rgba(0,0,0,.5);
+}
+.pageTopBannerImg img{
+    width:100%;
+    height: 200px;
+}
+
+.pageTopBannerTitle h2{
+    margin-top: 80px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+
+/*About page css*/
+
+.aboutPageContent{
+
+}
+
+
+/*Service page css*/
+
+.servicePageList{
+    padding: 10px;
+    box-shadow: 1px 1px 5px blue;
+    margin-top: 30px;
+}
+
+.servicePageList img{
+    width: 100%;
+    max-width: 250px;
+}
+
+.servicePageList button{
+    padding: 0px;
+}
+
+
 .footer{
 margin-top: 70px;
 }

@@ -2,6 +2,12 @@ import React, {Component,Fragment} from 'react';
 import {Nav, Navbar} from "react-bootstrap";
 import Logo from '../../../../images/logo.png'
 import TopBar from "./TopBar";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 class TopMenu extends Component {
     constructor() {
@@ -40,12 +46,12 @@ class TopMenu extends Component {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link className={this.state.topMenuLink} href="#deets">home</Nav.Link>
-                            <Nav.Link className={this.state.topMenuLink} href="#deets">about</Nav.Link>
-                            <Nav.Link className={this.state.topMenuLink} href="#deets">service</Nav.Link>
-                            <Nav.Link className={this.state.topMenuLink} href="#deets">course</Nav.Link>
-                            <Nav.Link className={this.state.topMenuLink} href="#deets">portfolio</Nav.Link>
-                            <Nav.Link className={this.state.topMenuLink} href="#deets">contact</Nav.Link>
+                            <Nav.Link ><Link className={this.state.topMenuLink} to="/">Home</Link></Nav.Link>
+                            <Nav.Link ><Link className={this.state.topMenuLink} to="/about">About</Link></Nav.Link>
+                            <Nav.Link ><Link className={this.state.topMenuLink} to="/service">Service</Link></Nav.Link>
+                            <Nav.Link ><Link className={this.state.topMenuLink} to="/course">Course</Link></Nav.Link>
+                            <Nav.Link ><Link className={this.state.topMenuLink} to="/portfolio">Portfolio</Link></Nav.Link>
+                            <Nav.Link ><Link className={this.state.topMenuLink} to="/contact">Contact</Link></Nav.Link>
 
                         </Nav>
                     </Navbar.Collapse>
