@@ -10,64 +10,55 @@ class ServicePageList extends Component {
             <Fragment>
                 <Container className={"servicePageCont mt-5"}>
                     <Row>
-                        <Col>
+                        <Col lg={3} md={6} sm={12}>
                             <div className={"servicePageList text-center"}>
                                 <Image src={web}></Image>
                                 <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever since the 1500s,</p>
-                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                                <Link to="/serviceSingle" className="btn btn-primary" size="lg" block>Details</Link>
                             </div>
                         </Col>
-                        <Col>
+                        <Col lg={3} md={6} sm={12}>
                             <div className={"servicePageList text-center"}>
                                 <Image src={web}></Image>
                                 <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever since the 1500s, </p>
-                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry... </p>
+                                <Link to="/serviceSingle" className="btn btn-primary" size="lg" block>Details</Link>
                             </div>
                         </Col>
-                        <Col>
+                        <Col lg={3} md={6} sm={12}>
                             <div className={"servicePageList text-center"}>
                                 <Image src={web}></Image>
                                 <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever since the 1500s,</p>
-                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
-                            </div>
-                        </Col>
-
-                        <Col>
-                            <div className={"servicePageList text-center"}>
-                                <Image src={web}></Image>
-                                <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever since the 1500s,</p>
-                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
-                            </div>
-                        </Col>
-                        <Col>
-                            <div className={"servicePageList text-center"}>
-                                <Image src={web}></Image>
-                                <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever since the 1500s, </p>
-                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
-                            </div>
-                        </Col>
-                        <Col>
-                            <div className={"servicePageList text-center"}>
-                                <Image src={web}></Image>
-                                <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever since the 1500s,</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
                                 <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
                             </div>
                         </Col>
 
-
-
+                        <Col lg={3} md={6} sm={12}>
+                            <div className={"servicePageList text-center"}>
+                                <Image src={web}></Image>
+                                <h2>Website Development</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
+                            </div>
+                        </Col>
+                        <Col lg={3} md={6} sm={12}>
+                            <div className={"servicePageList text-center"}>
+                                <Image src={web}></Image>
+                                <h2>Website Development</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
+                            </div>
+                        </Col>
+                        <Col lg={3} md={6} sm={12}>
+                            <div className={"servicePageList text-center"}>
+                                <Image src={web}></Image>
+                                <h2>Website Development</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
             </Fragment>

@@ -7,6 +7,7 @@ class CoursePage extends Component {
         return (
             <Fragment>
                 <CoursePageComponent/>
+
             </Fragment>
         );
     }

@@ -1,6 +1,6 @@
 import React, {Component,Fragment} from 'react';
-import TopMenu from "../Frontend/TopMenu/TopMenu";
-import AllPageTopBanner from "../Frontend/Common/AllPageTopBanner";
+import TopMenu from "../TopMenu/TopMenu";
+import AllPageTopBanner from "../Common/AllPageTopBanner";
 
 class ContactPageComponent extends Component {
     render() {

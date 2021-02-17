@@ -9,6 +9,7 @@ import ServicePage from "../pages/Frontend/ServicePage";
 import CoursePage from "../pages/Frontend/CoursePage";
 import PortfolioPage from "../pages/Frontend/PortfolioPage";
 import ContactPage from "../pages/Frontend/ContactPage";
+import ServiceSinglePage from "../pages/Frontend/ServiceSinglePage";
 
 class AppRoute extends Component {
     render() {
@@ -33,6 +34,13 @@ class AppRoute extends Component {
                 <Route exact path="/contact">
                     <ContactPage/>
                 </Route>
+
+                <Route exact path="/serviceSingle">
+                    <ServiceSinglePage/>
+                </Route>
+
+
+
 
                 <Route exact path="/">
                     <HomePage />
