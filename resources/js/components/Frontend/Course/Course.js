@@ -3,6 +3,7 @@ import {Button, Card, CardGroup, Col, Container, Image, ListGroup, Row} from "re
 import design from '../../../../images/design.png'
 import Slider from "react-slick";
 import student1 from "../../../../images/arnob.jpg";
+import {Link} from "react-router-dom";
 
 class Course extends Component {
     render() {
@@ -55,12 +56,12 @@ class Course extends Component {
                         <Col lg={6}>
                             <Row>
                                 <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
-                                    <a href="#">
+                                    <Link to="/courselist">
                                         <div className={"courseItemList text-center"}>
                                             <Image src={design}></Image>
                                             <h3>Graphics Design </h3>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </Col>
                                 <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
                                     <a href="#">

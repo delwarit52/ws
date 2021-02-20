@@ -1,18 +1,18 @@
 import React, {Component,Fragment} from 'react';
 import TopMenu from "../../components/Frontend/TopMenu/TopMenu";
-import CoursePageComponent from "../../components/Frontend/CoursePageComponent/CoursePageComponent";
 import AllPageTopBanner from "../../components/Frontend/Common/AllPageTopBanner";
+import CourseList from "../../components/Frontend/CoursePageComponent/CourseList";
 
-class CoursePage extends Component {
+class CourseListPage extends Component {
     render() {
         return (
             <Fragment>
-              <TopMenu/>
-                <AllPageTopBanner name={"Course"}/>
-                <CoursePageComponent/>
+                <TopMenu/>
+                <AllPageTopBanner name={"Graphics Course List"}/>
+                <CourseList/>
             </Fragment>
         );
     }
 }
 
-export default CoursePage;
+export default CourseListPage;

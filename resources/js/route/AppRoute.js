@@ -10,6 +10,9 @@ import CoursePage from "../pages/Frontend/CoursePage";
 import PortfolioPage from "../pages/Frontend/PortfolioPage";
 import ContactPage from "../pages/Frontend/ContactPage";
 import ServiceSinglePage from "../pages/Frontend/ServiceSinglePage";
+import CourseDetail from "../components/Frontend/CoursePageComponent/courseDetail";
+import CourseDetailPage from "../pages/Frontend/CourseDetailPage";
+import CourseListPage from "../pages/Frontend/CourseListPage";
 
 class AppRoute extends Component {
     render() {
@@ -25,6 +28,14 @@ class AppRoute extends Component {
 
                 <Route exact path="/course">
                     <CoursePage/>
+                </Route>
+
+                <Route exact path="/courselist">
+                    <CourseListPage/>
+                </Route>
+
+                <Route exact path="/courseDetail">
+                    <CourseDetailPage/>
                 </Route>
 
                 <Route exact path="/portfolio">

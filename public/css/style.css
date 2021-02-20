@@ -483,6 +483,130 @@
     padding: 0px;
 }
 
+/*course page css*/
+
+
+.coursePageItem {
+    padding: 10px;
+    box-shadow: 0px 0px 2px #6565bf;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.coursePageItem img {
+    width: 100px;
+    height: 100px;
+}
+
+.coursePageItem:hover {
+    /* background: #ffa9f0; */
+    box-shadow: 0px 0px 3px blue;
+}
+
+.coursePageItem h3 {
+    margin-top: 15px;
+    color: #848484;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+
+.coursePageRow{
+    margin-top: 50px;
+}
+
+.courseSidebar{
+    border: 2px solid #dadada;
+    min-height: 450px;
+    height: 100%;
+}
+
+.courseListItem{
+    box-shadow: 0px 0px 3px #8787ff;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.courseListItem h3 {
+    font-size: 16px;
+    color: #848484;
+    font-weight: 500;
+}
+
+.courseListItem p {
+    font-size: 16px;
+}
+
+.courseListItem h4 {
+    font-size: 16px;
+}
+
+.courseListItem h4 span.courseDuration {
+    color: #9595ff;
+}
+
+.courseListItem h4 span.courseAmount {
+    float: right;
+    color: #ff00eb;
+}
+
+.courseListItem a {
+    margin-top: 20px;
+}
+
+/*course details css*/
+.courseDetailContainer{
+
+}
+
+
+/*portfolio css*/
+
+.portfolioItemSidebar{
+    border: 2px solid #dadada;
+    min-height: 450px;
+    height: 100%;
+}
+
+.portfoliItem {
+    box-shadow: 0px 0px 3px #7a7ae8;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+.portfoliItemImg img{
+    width: 100%;
+}
+.portfoliItemContent{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    display: none;
+
+}
+
+.portfoliItem:hover .portfoliItemContent{
+    background: rgba(0,0,0,.6);
+    display: block;
+}
+
+/*Contact Css*/
+.contactItem {
+    box-shadow: 1px 1px 3px #d0d0d0;
+    height: 250px;
+    text-align: center;
+    padding: 15px;
+}
+
+.contactItem img {
+    width: 100px;
+    height: 100px;
+}
+
+
+
 
 .footer{
 margin-top: 70px;
