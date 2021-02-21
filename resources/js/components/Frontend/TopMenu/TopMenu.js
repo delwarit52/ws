@@ -51,6 +51,7 @@ class TopMenu extends Component {
                             <Nav.Link ><Link className={this.state.topMenuLink} to="/service">Service</Link></Nav.Link>
                             <Nav.Link ><Link className={this.state.topMenuLink} to="/course">Course</Link></Nav.Link>
                             <Nav.Link ><Link className={this.state.topMenuLink} to="/portfolio">Portfolio</Link></Nav.Link>
+                            <Nav.Link ><Link className={this.state.topMenuLink} to="/team">Team</Link></Nav.Link>
                             <Nav.Link ><Link className={this.state.topMenuLink} to="/contact">Contact</Link></Nav.Link>
 
                         </Nav>

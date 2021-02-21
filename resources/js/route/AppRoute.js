@@ -13,6 +13,7 @@ import ServiceSinglePage from "../pages/Frontend/ServiceSinglePage";
 import CourseDetail from "../components/Frontend/CoursePageComponent/courseDetail";
 import CourseDetailPage from "../pages/Frontend/CourseDetailPage";
 import CourseListPage from "../pages/Frontend/CourseListPage";
+import TeamPage from "../pages/Frontend/TeamPage";
 
 class AppRoute extends Component {
     render() {
@@ -30,6 +31,24 @@ class AppRoute extends Component {
                     <CoursePage/>
                 </Route>
 
+
+                <Route exact path="/portfolio">
+                    <PortfolioPage/>
+                </Route>
+
+
+                <Route exact path="/contact">
+                    <ContactPage/>
+                </Route>
+
+
+                <Route exact path="/team">
+                    <TeamPage/>
+                </Route>
+
+
+
+
                 <Route exact path="/courselist">
                     <CourseListPage/>
                 </Route>
@@ -38,19 +57,9 @@ class AppRoute extends Component {
                     <CourseDetailPage/>
                 </Route>
 
-                <Route exact path="/portfolio">
-                    <PortfolioPage/>
-                </Route>
-
-                <Route exact path="/contact">
-                    <ContactPage/>
-                </Route>
-
                 <Route exact path="/serviceSingle">
                     <ServiceSinglePage/>
                 </Route>
-
-
 
 
                 <Route exact path="/">
