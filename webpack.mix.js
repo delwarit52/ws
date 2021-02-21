@@ -19,5 +19,6 @@ mix.copy('resources/css/style.css','public/css');
 mix.copy('resources/css/responsive.css','public/css');
 mix.copy('resources/css/bootstrap.min.css','public/css');
 mix.copyDirectory('resources/images','public/images');
+mix.copy('resources/css/admin.css','public/css');
 
 

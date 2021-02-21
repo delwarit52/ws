@@ -14,11 +14,20 @@ import CourseDetail from "../components/Frontend/CoursePageComponent/courseDetai
 import CourseDetailPage from "../pages/Frontend/CourseDetailPage";
 import CourseListPage from "../pages/Frontend/CourseListPage";
 import TeamPage from "../pages/Frontend/TeamPage";
+import LoginPage from "../pages/Backend/LoginPage";
+import DashboardPage from "../pages/Backend/DashboardPage";
+import InfoPage from "../pages/Backend/InfoPage";
 
 class AppRoute extends Component {
     render() {
         return (
             <Switch>
+
+
+                <Route exact path="/">
+                    <HomePage />
+                </Route>
+
                 <Route exact path="/about">
                     <AboutPage/>
                 </Route>
@@ -62,9 +71,22 @@ class AppRoute extends Component {
                 </Route>
 
 
-                <Route exact path="/">
-                    <HomePage />
+                {/*Backend Route*/}
+
+
+                <Route exact path="/admin">
+                    <LoginPage/>
                 </Route>
+
+                <Route exact path="/dashboard">
+                    <DashboardPage/>
+                </Route>
+
+                <Route exact path="/info">
+                    <InfoPage/>
+                </Route>
+
+
 
             </Switch>
         );
