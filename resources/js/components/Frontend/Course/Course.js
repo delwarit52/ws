@@ -4,9 +4,84 @@ import design from '../../../../images/design.png'
 import Slider from "react-slick";
 import student1 from "../../../../images/arnob.jpg";
 import {Link} from "react-router-dom";
+import Axios from "axios";
+import graphics from "../../../../images/design.png";
 
 class Course extends Component {
+    constructor() {
+        super();
+        this.state={
+            datalist:[],
+            courselist:[],
+
+        }
+    }
+
+
+    componentDidMount() {
+        let cthis=this;
+        Axios.get('/home_course_cat')
+
+            .then(function (response) {
+                cthis.setState({datalist:response.data});
+
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+
+
+
+        Axios.get('/home_course_list')
+
+            .then(function (response) {
+                cthis.setState({courselist:response.data});
+
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+    }
+
+
+
     render() {
+
+        let dthis=this;
+        let datali=dthis.state.datalist;
+
+        let listData=datali.map((d)=>
+            <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
+                <Link to="/courselist">
+                    <div className={"courseItemList text-center"}>
+                        <Image src={design}></Image>
+                        <h3> {d.title}</h3>
+                    </div>
+                </Link>
+            </Col>
+
+        );
+
+
+
+        let courseli=dthis.state.courselist;
+
+        let courseData=courseli.map((d)=>
+            <div className={"courseListSlide text-left"}>
+                <h2>{d.title}</h2>
+                <h3><span>Duration: {d.duration} </span> <span>Amount:{d.amount}</span></h3>
+                <p>{d.topic}</p>
+                <Button className="btnGadiant">See More</Button>
+            </div>
+
+        );
+
+
+
+
+
         let settings = {
             dots: true,
             infinite: false,
@@ -55,68 +130,13 @@ class Course extends Component {
                     <Row>
                         <Col lg={6}>
                             <Row>
-                                <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
-                                    <Link to="/courselist">
-                                        <div className={"courseItemList text-center"}>
-                                            <Image src={design}></Image>
-                                            <h3>Graphics Design </h3>
-                                        </div>
-                                    </Link>
-                                </Col>
-                                <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
-                                    <a href="#">
-                                        <div className={"courseItemList text-center"}>
-                                            <Image src={design}></Image>
-                                            <h3>Web Design </h3>
-                                        </div>
-                                    </a>
-                                </Col>
-                                <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
-                                    <a href="#">
-                                        <div className={"courseItemList text-center"}>
-                                            <Image src={design}></Image>
-                                            <h3>Web Development </h3>
-                                        </div>
-                                    </a>
-                                </Col>
-                                <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
-                                    <a href="#">
-                                        <div className={"courseItemList text-center"}>
-                                            <Image src={design}></Image>
-                                            <h3>Web Development </h3>
-                                        </div>
-                                    </a>
-                                </Col>
-
+                                {listData}
                             </Row>
                         </Col>
                         <Col>
                             <div className="courseSlider">
                                 <Slider {...settings}>
-                                    <div className={"courseListSlide text-left"}>
-                                        <h2>Basic Web Design</h2>
-                                        <p>Individually import icons just once in an init module - there’s no need
-                                            to import the icons into each component once they’ve been added to the library...</p>
-                                        <Button className="btnGadiant">See More</Button>
-                                    </div>
-                                    <div className={"courseListSlide text-left"}>
-                                        <h2>Basic Web Design</h2>
-                                        <p>Individually import icons just once in an init module - there’s no need
-                                            to import the icons into each component once they’ve been added to the library...</p>
-                                        <Button>See More</Button>
-                                    </div>
-                                    <div className={"courseListSlide text-left"}>
-                                        <h2>Basic Web Design</h2>
-                                        <p>Individually import icons just once in an init module - there’s no need
-                                            to import the icons into each component once they’ve been added to the library...</p>
-                                        <Button>See More</Button>
-                                    </div>
-                                    <div className={"courseListSlide text-left"}>
-                                        <h2>Basic Web Design</h2>
-                                        <p>Individually import icons just once in an init module - there’s no need
-                                            to import the icons into each component once they’ve been added to the library...</p>
-                                        <Button>See More</Button>
-                                    </div>
+                                    {courseData}
                                 </Slider>
                             </div>
                         </Col>

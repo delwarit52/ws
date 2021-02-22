@@ -13,7 +13,16 @@ class InfoTable extends Migration
      */
     public function up()
     {
-        //
+         Schema::create('info', function (Blueprint $table) {
+                     $table->id('info_id');
+                     $table->string('mobile');
+                     $table->string('address_short');
+                     $table->string('email');
+                     $table->string('fb_page');
+                     $table->string('opening_time');
+                     $table->string('address_long');
+                    $table->timestamp('created_at')->nullable();
+                });
     }
 
     /**
@@ -23,6 +32,6 @@ class InfoTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('info');
     }
 }

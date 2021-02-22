@@ -2,7 +2,33 @@ import React, {Component,Fragment} from 'react';
 import {Button, Col, Container, Image, Row} from "react-bootstrap";
 import AboutImg from '../../../../images/slider2.jpg'
 
+import Axios from "axios";
+
 class HomeAboutUs extends Component {
+    constructor() {
+        super();
+        this.state={
+            datalist:[],
+            aboutTitle:'',
+            aboutDetail:''
+        }
+    }
+
+    componentDidMount() {
+        let cthis=this;
+
+        Axios.get('/home_about')
+            .then(function(respose){
+                cthis.setState({datalist:respose.data})
+                cthis.setState({aboutTitle:cthis.state.datalist[0].title})
+                cthis.setState({aboutDetail:cthis.state.datalist[0].detail})
+
+            })
+            .catch(function(error){
+            });
+}
+
+
     render() {
         return (
             <Fragment>
@@ -16,12 +42,8 @@ class HomeAboutUs extends Component {
                     </Col>
                     <Col>
                         <div className="aboutContent">
-                            <h2 className="mt-5 aboutTitle">About Us</h2>
-                            <p className="mt-3 text-justify aboutDes">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries, but also the leap
-                                into electronic typesetting, remaining essentially unchanged. </p>
+                            <h2 className="mt-5 aboutTitle">{this.state.aboutTitle}</h2>
+                            <p className="mt-3 text-justify aboutDes"> {this.state.aboutDetail}</p>
                             <Button className="btn btn-primary mt-1 aboutBtn">More Info</Button>
                         </div>
                     </Col>
