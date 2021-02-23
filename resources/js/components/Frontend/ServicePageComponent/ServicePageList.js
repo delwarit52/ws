@@ -2,63 +2,63 @@ import React, {Component,Fragment} from 'react';
 import {Button, Col, Container, Image, Row} from "react-bootstrap";
 import web from '../../../../images/design.png';
 import {Link} from "react-router-dom";
+import Axios from "axios";
 
 
 class ServicePageList extends Component {
+    constructor() {
+        super();
+        this.state={
+            datalist:[],
+            sId:5,
+        }
+    }
+
+
+    componentDidMount() {
+        let cthis=this;
+
+        Axios.get('/serviceList')
+            .then(function(respose){
+                cthis.setState({datalist:respose.data})
+
+            })
+            .catch(function(error){
+            });
+    }
+
+
+
+   deleteRow(d){
+        alert(d)
+    }
+
+
+
+
+
     render() {
+
+
+
         return (
             <Fragment>
                 <Container className={"servicePageCont mt-5"}>
                     <Row>
-                        <Col lg={3} md={6} sm={12}>
-                            <div className={"servicePageList text-center"}>
-                                <Image src={web}></Image>
-                                <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-                                <Link to="/serviceSingle" className="btn btn-primary" size="lg" block>Details</Link>
-                            </div>
-                        </Col>
-                        <Col lg={3} md={6} sm={12}>
-                            <div className={"servicePageList text-center"}>
-                                <Image src={web}></Image>
-                                <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry... </p>
-                                <Link to="/serviceSingle" className="btn btn-primary" size="lg" block>Details</Link>
-                            </div>
-                        </Col>
-                        <Col lg={3} md={6} sm={12}>
-                            <div className={"servicePageList text-center"}>
-                                <Image src={web}></Image>
-                                <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
-                            </div>
-                        </Col>
+                        {
+                            this.state.datalist.map((d)=>
 
-                        <Col lg={3} md={6} sm={12}>
+                        <Col lg={4} md={6} sm={12}>
                             <div className={"servicePageList text-center"}>
                                 <Image src={web}></Image>
-                                <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
+                                <h2>{d.title}</h2>
+                                <p>{d.detail}... </p>
+                                <Button className="mb-2" onClick={this.deleteRow.bind(this,`${d.service_id}`)}>Edit</Button>
                             </div>
                         </Col>
-                        <Col lg={3} md={6} sm={12}>
-                            <div className={"servicePageList text-center"}>
-                                <Image src={web}></Image>
-                                <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
-                            </div>
-                        </Col>
-                        <Col lg={3} md={6} sm={12}>
-                            <div className={"servicePageList text-center"}>
-                                <Image src={web}></Image>
-                                <h2>Website Development</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-                                <Link><Button className="btn btn-primary" size="lg" block>Details</Button></Link>
-                            </div>
-                        </Col>
+                            )
+                        }
+
                     </Row>
                 </Container>
             </Fragment>

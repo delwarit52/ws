@@ -3,12 +3,14 @@ import {Button, Col, Container, Modal, Row} from "react-bootstrap";
 import Video from "../Video/Video";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCoffee, faPlayCircle} from '@fortawesome/free-solid-svg-icons'
+import Axios from "axios";
 
 class Achievement extends Component {
     constructor() {
         super();
         this.state={
             show:false,
+            datalist:[]
         }
 
         this.handleShow=this.handleShow.bind(this);
@@ -24,19 +26,36 @@ class Achievement extends Component {
     }
 
 
+
+
+    componentDidMount() {
+        let cthis = this;
+        Axios.get('/home_achivement')
+            .then(function (response) {
+                cthis.setState({datalist: response.data});
+
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+    }
+
+
     render() {
         return (
             <Fragment>
                 <section className={"sectionMarginPadding achievementSection"}>
                     <Container>
                         <Row>
+                            {
+                                this.state.datalist.map((d)=>
+
+
                             <Col>
                                 <div className="achievement text-center">
-                                    <h2>Our Achievement</h2>
-                                    <p>First i analysis the requirement of project. According to the requirement i make a proper technical
-                                        analysis, then i build a software architecture. According to the planning i start coding.
-                                        Testing is also going on with coding. Final testing take place after finishing coding part.
-                                        After successful implementation i provide 6 month free bug fixing service for corresponding project.
+                                    <h2>{d.title}</h2>
+                                    <p>{d.detail}
                                     </p>
                                     <Button variant="primary" onClick={this.handleShow}>
                                         <FontAwesomeIcon icon={faPlayCircle} />
@@ -60,6 +79,8 @@ class Achievement extends Component {
                                     </Modal>
                                 </div>
                             </Col>
+                                )
+                            }
                         </Row>
                     </Container>
                 </section>

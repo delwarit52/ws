@@ -3,6 +3,7 @@ import {Button, Col, Container, Image, Row} from "react-bootstrap";
 import AboutImg from '../../../../images/slider2.jpg'
 
 import Axios from "axios";
+import {Link} from "react-router-dom";
 
 class HomeAboutUs extends Component {
     constructor() {
@@ -44,7 +45,7 @@ class HomeAboutUs extends Component {
                         <div className="aboutContent">
                             <h2 className="mt-5 aboutTitle">{this.state.aboutTitle}</h2>
                             <p className="mt-3 text-justify aboutDes"> {this.state.aboutDetail}</p>
-                            <Button className="btn btn-primary mt-1 aboutBtn">More Info</Button>
+                            <Link to="/about"><Button className="btn btn-primary mt-1 aboutBtn">More Info</Button></Link>
                         </div>
                     </Col>
                 </Row>

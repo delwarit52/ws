@@ -17,7 +17,6 @@ class CourseCatTable extends Migration
                                                     $table->id('course_cat_id');
                                                     $table->text('img');
                                                     $table->string('title');
-
                                                     $table->timestamps();
                                                });
     }

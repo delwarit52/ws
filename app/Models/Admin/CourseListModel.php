@@ -9,6 +9,6 @@ class CourseListModel extends Model
 {
     use HasFactory;
     public $table="course_list";
-                 public $primaryKey="course_list_id";
-                 public $timestamps=false;
+    public $primaryKey="course_list_id";
+    public $timestamps=false;
 }

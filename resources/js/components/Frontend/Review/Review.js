@@ -7,11 +7,37 @@ import slider1 from '../../../../images/banner.jpg'
 import slider2 from '../../../../images/slider2.jpg'
 import student1 from '../../../../images/arnob.jpg'
 import {Col, Container, Image, Row} from "react-bootstrap";
+import Axios from "axios";
 
 
 
 
 class Review extends Component {
+    constructor() {
+        super();
+        this.state={
+            datalist:[],
+        }
+    }
+
+
+    componentDidMount() {
+        let cthis = this;
+        Axios.get('/home_review')
+
+            .then(function (response) {
+                cthis.setState({datalist: response.data});
+
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+    }
+
+
+
+
     render() {
         let settings = {
             dots: true,

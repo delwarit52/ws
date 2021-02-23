@@ -11,6 +11,10 @@ use App\Models\Admin\AboutModel;
 use App\Models\Admin\ServiceModel;
 use App\Models\Admin\CourseCatModel;
 use App\Models\Admin\CourseListModel;
+use App\Models\Admin\ProjectSummaryModel;
+use App\Models\Admin\ProjectModel;
+use App\Models\Admin\AchivementModel;
+use App\Models\Admin\ReviewModel;
 
 class HomeController extends Controller
 {
@@ -39,11 +43,39 @@ class HomeController extends Controller
                         return $result;
                   }
 
-                   public function home_course_list(){
-                                          $result=CourseListModel::all();
-                                          return $result;
-                                    }
+       public function home_course_list(){
+                 $result=CourseListModel::all();
+                        return $result;
+     }
+
+
+      public function home_project_summary(){
+                      $result=ProjectSummaryModel::all();
+                             return $result;
+          }
+
+              public function home_project(){
+                                $result=ProjectModel::all();
+                                       return $result;
+                    }
+
+
+
+         public function home_achivement(){
+                            $result=AchivementModel::all();
+                                               return $result;
+                            }
+
+
+             public function home_review(){
+                                     $result=ReviewModel::all();
+                                                        return $result;
+                                     }
+
+
+
 
 
 
 }
+
