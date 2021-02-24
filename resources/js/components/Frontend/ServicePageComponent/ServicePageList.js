@@ -30,7 +30,7 @@ class ServicePageList extends Component {
 
 
    deleteRow(d){
-        alert(d)
+
     }
 
 
@@ -54,6 +54,7 @@ class ServicePageList extends Component {
                                 <h2>{d.title}</h2>
                                 <p>{d.detail}... </p>
                                 <Button className="mb-2" onClick={this.deleteRow.bind(this,`${d.service_id}`)}>Edit</Button>
+                                <Link to={`/serviceSingle/${d.service_id}`}>Detail</Link>
                             </div>
                         </Col>
                             )

@@ -10,6 +10,7 @@ class ServiceDetail extends Component {
                         <Col>
                             <div className={"serviceDetail"}>
                                 <h2>Web Design and development Details</h2>
+                                {this.props.id}
                             </div>
                         </Col>
                     </Row>

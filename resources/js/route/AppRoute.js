@@ -66,9 +66,7 @@ class AppRoute extends Component {
                     <CourseDetailPage/>
                 </Route>
 
-                <Route exact path="/serviceSingle">
-                    <ServiceSinglePage/>
-                </Route>
+                <Route exact path="/serviceSingle/:id" component={ServiceSinglePage}/>
 
 
                 {/*Backend Route*/}
