@@ -3,13 +3,51 @@ import TopMenu from "../TopMenu/TopMenu";
 import AllPageTopBanner from "../Common/AllPageTopBanner";
 import {Button, Col, Container, Form, Image, Row} from "react-bootstrap";
 import address from '../../../../images/address.png'
+import Axios from "axios";
 
 class ContactPageComponent extends Component {
+    constructor() {
+        super();
+        this.state={
+            datalist:[],
+            addressShort:'',
+            openingTime:'',
+            mobile:'',
+            email:'',
+        }
+    }
+
+
+    componentDidMount() {
+        let cthis=this;
+        Axios.get('/contactInfo')
+            .then(function(respose){
+                cthis.setState({datalist:respose.data})
+                cthis.setState({addressShort:cthis.state.datalist[0].address_short});
+                cthis.setState({openingTime:cthis.state.datalist[0].opening_time});
+                cthis.setState({mobile:cthis.state.datalist[0].mobile});
+                cthis.setState({email:cthis.state.datalist[0].email});
+
+
+            })
+            .catch(function(error){
+            });
+
+    }
+
+
     render() {
         return (
             <Fragment>
                <Container className="contactContainer mt-5">
                    <Row>
+
+
+
+
+
+
+
                        <Col>
                            <div className="contactItem">
                                <Image src={address}></Image>
@@ -18,22 +56,25 @@ class ContactPageComponent extends Component {
                                <p>5th Floor , Left - 5 ,Mosjid Floor</p>
                            </div>
                        </Col>
+
                        <Col>
                            <div className="contactItem">
                                <Image src={address}></Image>
                                <h2>Contact</h2>
-                               <p>Mobile: 01318520054</p>
-                               <p>Email: info.delwarit@gmail.com</p>
+                               <p>Mobile: {this.state.mobile}</p>
+                               <p>Email: {this.state.email}</p>
                            </div>
                        </Col>
                        <Col>
                            <div className="contactItem">
                                <Image src={address}></Image>
-                               <h2>Openning Time</h2>
-                               <p>10.00 Am -9.pm</p>
+                               <h2>Office Time</h2>
+                               <p>{this.state.openingTime}</p>
 
                            </div>
                        </Col>
+
+
                    </Row>
 
                    <Row className="contactForm mt-5">

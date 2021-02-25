@@ -9,7 +9,7 @@ class CourseListPage extends Component {
             <Fragment>
                 <TopMenu/>
                 <AllPageTopBanner name={"Graphics Course List"}/>
-                <CourseList/>
+                <CourseList id={this.props.match.params.id}/>
             </Fragment>
         );
     }

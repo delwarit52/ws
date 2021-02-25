@@ -29,6 +29,8 @@ class ServicePageList extends Component {
 
 
 
+
+
    deleteRow(d){
 
     }

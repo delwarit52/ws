@@ -17,6 +17,8 @@ import TeamPage from "../pages/Frontend/TeamPage";
 import LoginPage from "../pages/Backend/LoginPage";
 import DashboardPage from "../pages/Backend/DashboardPage";
 import InfoPage from "../pages/Backend/InfoPage";
+import SliderPage from "../pages/Backend/SliderPage";
+import DeleteSlider from "../components/Backend/Slider/DeleteSlider";
 
 class AppRoute extends Component {
     render() {
@@ -58,13 +60,11 @@ class AppRoute extends Component {
 
 
 
-                <Route exact path="/courselist">
-                    <CourseListPage/>
-                </Route>
+                <Route exact path="/courselist/:id" component={CourseListPage}/>
 
-                <Route exact path="/courseDetail">
-                    <CourseDetailPage/>
-                </Route>
+
+                <Route exact path="/courseDetail/:id" component={CourseDetailPage}/>
+
 
                 <Route exact path="/serviceSingle/:id" component={ServiceSinglePage}/>
 
@@ -84,7 +84,9 @@ class AppRoute extends Component {
                     <InfoPage/>
                 </Route>
 
-
+                <Route exact path="/slider">
+                    <SliderPage/>
+                </Route>
 
             </Switch>
         );

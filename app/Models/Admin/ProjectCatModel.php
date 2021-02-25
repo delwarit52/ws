@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProjectCatModel extends Model
 {
     use HasFactory;
+     public $table="project_cat";
+            public $primaryKey="project_cat_id";
+            public $timestamps=false;
 }

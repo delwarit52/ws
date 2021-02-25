@@ -37,15 +37,38 @@ Route::get('/aboutContent',[\App\Http\Controllers\Frontend\AboutController::clas
 
 //About Page routes
 Route::get('/serviceList',[\App\Http\Controllers\Frontend\ServiceController::class,'service']);
+Route::post('/serviceDetail',[\App\Http\Controllers\Frontend\ServiceController::class,'serviceDetail']);
+
+// Course Page Routes
+Route::get('/courseCat',[\App\Http\Controllers\Frontend\CourseController::class,'courseCat']);
+Route::post('/courselist',[\App\Http\Controllers\Frontend\CourseController::class,'courselist']);
+Route::post('/courseDetail',[\App\Http\Controllers\Frontend\CourseController::class,'courseDetail']);
 
 
+// project page Route
+Route::get('/projectCat',[\App\Http\Controllers\Frontend\ProjectController::class,'projectCat']);
+Route::get('/projectlist',[\App\Http\Controllers\Frontend\ProjectController::class,'projectlist']);
+Route::post('/catProject',[\App\Http\Controllers\Frontend\ProjectController::class,'catProject']);
+
+
+
+// Team page route
+
+Route::get('/teamlist',[\App\Http\Controllers\Frontend\TeamController::class,'teamlist']);
+
+
+// Contact page route
+Route::get('/contactInfo',[\App\Http\Controllers\Frontend\ContactController::class,'contacts']);
 
 
 // website Admin
 Route::get('/getInfo',[\App\Http\Controllers\Admin\InfoController::class,'getInfo']);
+Route::post('/updateInfo',[\App\Http\Controllers\Admin\InfoController::class,'updateInfo']);
 
 
-
+//slider
+Route::get('/slider',[\App\Http\Controllers\Admin\SliderController::class,'slider']);
+Route::post('/sliderDelete',[\App\Http\Controllers\Admin\SliderController::class,'deleteSlider']);
 
 
 

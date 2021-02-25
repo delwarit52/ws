@@ -9,7 +9,7 @@ class CourseDetailPage extends Component {
             <Fragment>
                 <TopMenu/>
                 <AllPageTopBanner/>
-                <CourseDetail/>
+                <CourseDetail id={this.props.match.params.id}/>
             </Fragment>
         );
     }

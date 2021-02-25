@@ -1,4 +1,30 @@
 .sidebar {
-    background: #4d4d84;
+    background: #f9f9f9;
     height: 90vh;
 }
+
+.beforeAlert{
+    background: #FFFFFF;
+}
+.beforeAlert h5{
+    color: #ffffff;
+}
+
+.afterAlert{
+    background: #FFFFFF;
+    padding: 5px 10px;
+    margin-bottom: 30px;
+    animation-name: example;
+    animation-duration: 5s;
+}
+
+.afterAlert h5{
+    color: #ffffff;
+}
+
+@keyframes example {
+    from {background-color: white;}
+    to {background-color: cornflowerblue;}
+}
+
+
