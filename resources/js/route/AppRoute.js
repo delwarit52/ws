@@ -19,6 +19,7 @@ import DashboardPage from "../pages/Backend/DashboardPage";
 import InfoPage from "../pages/Backend/InfoPage";
 import SliderPage from "../pages/Backend/SliderPage";
 import DeleteSlider from "../components/Backend/Slider/DeleteSlider";
+import AddSlider from "../components/Backend/Slider/AddSlider";
 
 class AppRoute extends Component {
     render() {
@@ -86,6 +87,10 @@ class AppRoute extends Component {
 
                 <Route exact path="/slider">
                     <SliderPage/>
+                </Route>
+
+                <Route exact path="/addSlider">
+                    <AddSlider/>
                 </Route>
 
             </Switch>

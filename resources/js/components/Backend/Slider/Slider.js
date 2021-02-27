@@ -34,6 +34,9 @@ class Slider extends Component {
     }
 
 
+
+
+
     deleteSlider(){
 
         let cthis=this;
@@ -94,7 +97,8 @@ class Slider extends Component {
                             <Card>
                                 <Card.Header><h4>Slider</h4></Card.Header>
                                 <Card.Body>
-                                    <Button onClick={this.deleteSlider} className={"btn btn-primary"} >Delete</Button> <span>Add</span>
+                                    <Button onClick={this.deleteSlider} className={"btn btn-primary"} >Delete</Button>
+                                    <Link to="/addSlider" className={"btn btn-primary"}>Add</Link>
                                     <BootstrapTable keyField='slider_id' data={ data } columns={ columns } selectRow={ selectRow }/>
                                 </Card.Body>
                             </Card>
