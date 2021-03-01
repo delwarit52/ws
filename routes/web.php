@@ -69,6 +69,7 @@ Route::post('/updateInfo',[\App\Http\Controllers\Admin\InfoController::class,'up
 //slider
 Route::get('/slider',[\App\Http\Controllers\Admin\SliderController::class,'slider']);
 Route::post('/sliderDelete',[\App\Http\Controllers\Admin\SliderController::class,'deleteSlider']);
+Route::post('/addSlider',[\App\Http\Controllers\Admin\SliderController::class,'addSlider']);
 
 
 

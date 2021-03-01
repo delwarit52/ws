@@ -4,6 +4,7 @@ import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
 import Sidebar from "../Sidebar/Sidebar";
 import {Link} from "react-router-dom";
 import BootstrapTable from "react-bootstrap-table-next";
+import Axios from "axios";
 
 class AddSlider extends Component {
     constructor() {
@@ -11,17 +12,16 @@ class AddSlider extends Component {
         this.state={
             title:'',
             subTitle:'',
-            link:'',
             detail:'',
+            sliderlink:'',
             img:''
         }
 
         this.title=this.title.bind(this);
         this.subTitle=this.subTitle.bind(this);
-        this.link=this.link.bind(this);
         this.detail=this.detail.bind(this);
+        this.sliderLink=this.sliderLink.bind(this);
         this.files=this.files.bind(this);
-
         this.handleForm=this.handleForm.bind(this);
 
 
@@ -32,7 +32,7 @@ class AddSlider extends Component {
     title(event){
 
         let title=event.target.value;
-        this.setState({link:link})
+        this.setState({title:title})
     }
 
     subTitle(event){
@@ -41,10 +41,13 @@ class AddSlider extends Component {
        this.setState({subtitle:subtitle})
     }
 
-    link(event){
-        let link=event.target.value;
-        this.setState({link:link})
+    sliderLink(event){
+
+        let sl=event.target.value;
+        this.setState({sliderlink:sl})
     }
+
+
 
     detail(event){
         let detail=event.target.value;
@@ -60,14 +63,38 @@ class AddSlider extends Component {
         event.preventDefault();
         let title=this.state.title;
         let subtitle=this.state.subtitle;
-        let link=this.state.link;
+        let sliderlink=this.state.sliderlink;
         let detail=this.state.detail;
         let img=this.state.img;
-        console.log(img)
+
+       console.log(img)
+
+        let url='/addSlider'
+
+        let data = new FormData();
+        data.append('title', title);
+        data.append('subtitle', subtitle);
+        data.append('linkData', sliderlink);
+        data.append('detail', detail);
+        data.append('img', img);
+
+
+        let config = {
+           headers: { 'content-type': 'multipart/form-data' }
+       };
+
+        Axios.post(url, data,config).then(function (response) {
+            if(response.data){
+                console.log("success");
+            }
+        })
+            .catch(function (error) {
+                console.log(error);
+            });
+
 
 
     }
-
 
 
     render() {
@@ -90,7 +117,7 @@ class AddSlider extends Component {
                                             <Col lg={6} md={6}>
                                                 <Form.Group controlId="formBasicEmail">
                                                     <Form.Label>Title</Form.Label>
-                                                    <Form.Control type="email" onChange={this.title} />
+                                                    <Form.Control type="text" onChange={this.title} />
 
                                                 </Form.Group>
 
@@ -101,7 +128,7 @@ class AddSlider extends Component {
 
                                                 <Form.Group controlId="formBasicEmail">
                                                     <Form.Label>Link</Form.Label>
-                                                    <Form.Control type="text" onChange={this.link} />
+                                                    <Form.Control type="text" onChange={this.sliderLink} />
 
                                                 </Form.Group>
 

@@ -1,5 +1,5 @@
 import React, {Component,Fragment} from 'react';
-import {Button, Card, Col, Container, Row} from "react-bootstrap";
+import {Button, Card, Col, Container, Image, Row} from "react-bootstrap";
 import Sidebar from "../Sidebar/Sidebar";
 import BootstrapTable from 'react-bootstrap-table-next';
 import Axios from "axios";
@@ -73,16 +73,39 @@ class Slider extends Component {
         };
 
         const data = this.state.datalist;
-        const columns = [{
+        const columns = [
+
+        {
             dataField: 'slider_id',
             text: 'Slider ID'
-        }, {
+        },
+
+        {
             dataField: 'title',
             text: 'Title'
-        }, {
+        },
+
+        {
             dataField: 'link',
             text: 'Link'
-        }];
+        },
+
+        {
+            dataField: 'image',
+            text: 'Image',
+            formatter: priceFormatter
+        }
+
+        ];
+
+        function priceFormatter(cell,row){
+
+            let im=`storage/uploads/slider/${cell}`
+            return (
+
+               <Image src={im}/>
+            );
+        }
 
 
 
@@ -99,7 +122,9 @@ class Slider extends Component {
                                 <Card.Body>
                                     <Button onClick={this.deleteSlider} className={"btn btn-primary"} >Delete</Button>
                                     <Link to="/addSlider" className={"btn btn-primary"}>Add</Link>
-                                    <BootstrapTable keyField='slider_id' data={ data } columns={ columns } selectRow={ selectRow }/>
+                                    <BootstrapTable keyField='slider_id' data={ data } columns={ columns } selectRow={ selectRow }>
+
+                                    </BootstrapTable>
                                 </Card.Body>
                             </Card>
                         </Col>
