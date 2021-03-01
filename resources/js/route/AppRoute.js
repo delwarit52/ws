@@ -18,7 +18,7 @@ import LoginPage from "../pages/Backend/LoginPage";
 import DashboardPage from "../pages/Backend/DashboardPage";
 import InfoPage from "../pages/Backend/InfoPage";
 import SliderPage from "../pages/Backend/SliderPage";
-import DeleteSlider from "../components/Backend/Slider/DeleteSlider";
+import EditSlider from "../components/Backend/Slider/EditSlider";
 import AddSlider from "../components/Backend/Slider/AddSlider";
 
 class AppRoute extends Component {
@@ -92,6 +92,8 @@ class AppRoute extends Component {
                 <Route exact path="/addSlider">
                     <AddSlider/>
                 </Route>
+
+                <Route exact path="/editSlider/:id" component={EditSlider}/>
 
             </Switch>
         );

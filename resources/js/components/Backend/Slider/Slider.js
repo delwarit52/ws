@@ -35,8 +35,6 @@ class Slider extends Component {
 
 
 
-
-
     deleteSlider(){
 
         let cthis=this;
@@ -57,12 +55,10 @@ class Slider extends Component {
 
 
 
-
-
     render() {
 
         let rid=this.state.rowid;
-        console.log(rid);
+
 
 
         const selectRow = {
@@ -87,7 +83,8 @@ class Slider extends Component {
 
         {
             dataField: 'link',
-            text: 'Link'
+            text: 'Link',
+
         },
 
         {
@@ -103,9 +100,11 @@ class Slider extends Component {
             let im=`storage/uploads/slider/${cell}`
             return (
 
-               <Image src={im}/>
+               <img  className={"sliderImg"} src={im}/>
             );
         }
+
+
 
 
 
@@ -120,8 +119,13 @@ class Slider extends Component {
                             <Card>
                                 <Card.Header><h4>Slider</h4></Card.Header>
                                 <Card.Body>
+
+                                    <Link to={`/editSlider/${this.state.rowid}`} className={"btn btn-primary"}>Update</Link>
+
                                     <Button onClick={this.deleteSlider} className={"btn btn-primary"} >Delete</Button>
+
                                     <Link to="/addSlider" className={"btn btn-primary"}>Add</Link>
+
                                     <BootstrapTable keyField='slider_id' data={ data } columns={ columns } selectRow={ selectRow }>
 
                                     </BootstrapTable>
