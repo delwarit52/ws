@@ -4,6 +4,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import BootstrapTable from 'react-bootstrap-table-next';
 import Axios from "axios";
 import {Link} from "react-router-dom";
+import {Redirect} from "react-router";
 
 
 
@@ -14,9 +15,11 @@ class Slider extends Component {
         this.state={
             datalist:[],
             rowid:'',
+            editRedirect:false,
         }
 
         this.deleteSlider=this.deleteSlider.bind(this);
+        this.editItem=this.editItem.bind(this);
     }
 
 
@@ -54,12 +57,28 @@ class Slider extends Component {
     }
 
 
+    editItem(event){
+
+        let cthis=this;
+        let rowid=cthis.state.rowid;
+       if(rowid){
+           cthis.setState({editRedirect:true})
+       }
+       else{
+           event.preventDefault();
+       }
+
+    }
+
+
+
+
+
+
 
     render() {
 
         let rid=this.state.rowid;
-
-
 
         const selectRow = {
             mode: 'radio',
@@ -104,8 +123,10 @@ class Slider extends Component {
             );
         }
 
-
-
+        let rthis=this;
+        if(rthis.state.editRedirect){
+            return <Redirect to={`/editSlider/${rid}`} />
+        }
 
 
         return (
@@ -120,7 +141,7 @@ class Slider extends Component {
                                 <Card.Header><h4>Slider</h4></Card.Header>
                                 <Card.Body>
 
-                                    <Link to={`/editSlider/${this.state.rowid}`} className={"btn btn-primary"}>Update</Link>
+                                    <Button className="mb-2" onClick={this.editItem}>Edit</Button>
 
                                     <Button onClick={this.deleteSlider} className={"btn btn-primary"} >Delete</Button>
 

@@ -14,7 +14,8 @@ class AddSlider extends Component {
             subTitle:'',
             detail:'',
             sliderlink:'',
-            img:''
+            img:'',
+
         }
 
         this.title=this.title.bind(this);
@@ -55,19 +56,21 @@ class AddSlider extends Component {
     }
 
     files(event){
+
         let image=event.target.files[0];
         this.setState({img:image})
     }
 
     handleForm(event){
         event.preventDefault();
+
         let title=this.state.title;
         let subtitle=this.state.subtitle;
         let sliderlink=this.state.sliderlink;
         let detail=this.state.detail;
         let img=this.state.img;
 
-       console.log(img)
+
 
         let url='/addSlider'
 
