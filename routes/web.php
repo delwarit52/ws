@@ -74,6 +74,15 @@ Route::post('/editSlider',[\App\Http\Controllers\Admin\SliderController::class,'
 Route::post('/updateSlider',[\App\Http\Controllers\Admin\SliderController::class,'updateSlider']);
 Route::post('/updateSliderWithImg',[\App\Http\Controllers\Admin\SliderController::class,'updateSliderWithImg']);
 
+//AnaLytic
+Route::get('/analytic',[\App\Http\Controllers\Admin\AnalyticController::class,'analytic']);
+Route::post('/editAnalytic',[\App\Http\Controllers\Admin\AnalyticController::class,'editAnalytic']);
+Route::post('/updateAnalytic',[\App\Http\Controllers\Admin\AnalyticController::class,'updateAnalytic']);
+Route::post('/updateAnalyticWithImg',[\App\Http\Controllers\Admin\AnalyticController::class,'updateAnalyticWithImg']);
+
+//About
+Route::get('/adminAbout',[\App\Http\Controllers\Admin\AboutController::class,'adminAbout']);
+Route::post('/editAbout',[\App\Http\Controllers\Admin\AboutController::class,'editAbout']);
 
 
 Route::get('{AnyRoute}',function(){

@@ -141,11 +141,11 @@ class Slider extends Component {
                                 <Card.Header><h4>Slider</h4></Card.Header>
                                 <Card.Body>
 
-                                    <Button className="mb-2" onClick={this.editItem}>Edit</Button>
+                                    <Button className="mr-10 editButton" onClick={this.editItem}>Edit</Button>
 
-                                    <Button onClick={this.deleteSlider} className={"btn btn-primary"} >Delete</Button>
+                                    <Button onClick={this.deleteSlider} className={"btn btn-primary mr-10 editButton"} >Delete</Button>
 
-                                    <Link to="/addSlider" className={"btn btn-primary"}>Add</Link>
+                                    <Link to="/addSlider" className={"btn btn-primary editButton"}>Add</Link>
 
                                     <BootstrapTable keyField='slider_id' data={ data } columns={ columns } selectRow={ selectRow }>
 

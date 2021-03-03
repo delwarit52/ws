@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import {Link} from "react-router-dom";
 import BootstrapTable from "react-bootstrap-table-next";
 import Axios from "axios";
+import {Redirect} from "react-router";
 
 class AddSlider extends Component {
     constructor() {
@@ -15,6 +16,7 @@ class AddSlider extends Component {
             detail:'',
             sliderlink:'',
             img:'',
+            addRedirect:false
 
         }
 
@@ -81,6 +83,8 @@ class AddSlider extends Component {
         data.append('detail', detail);
         data.append('img', img);
 
+        let athis=this;
+
 
         let config = {
            headers: { 'content-type': 'multipart/form-data' }
@@ -88,7 +92,7 @@ class AddSlider extends Component {
 
         Axios.post(url, data,config).then(function (response) {
             if(response.data){
-                console.log("success");
+                athis.setState({addRedirect:true})
             }
         })
             .catch(function (error) {
@@ -101,6 +105,11 @@ class AddSlider extends Component {
 
 
     render() {
+
+        let rthis=this;
+        if(rthis.state.addRedirect){
+            return <Redirect to='/slider'/>
+        }
         return (
             <Fragment>
                <TopMenu/>

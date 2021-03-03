@@ -20,6 +20,10 @@ import InfoPage from "../pages/Backend/InfoPage";
 import SliderPage from "../pages/Backend/SliderPage";
 import EditSlider from "../components/Backend/Slider/EditSlider";
 import AddSlider from "../components/Backend/Slider/AddSlider";
+import AnalyticPage from "../pages/Backend/AnalyticPage";
+import EditAnalytic from "../components/Backend/Analytic/EditAnalytic";
+import AdminAboutPage from "../pages/Backend/AdminAboutPage";
+import EditAbout from "../components/Backend/About/EditAbout";
 
 class AppRoute extends Component {
     render() {
@@ -32,7 +36,7 @@ class AppRoute extends Component {
                 </Route>
 
                 <Route exact path="/about">
-                    <AboutPage/>
+                    <AdminAboutPage/>
                 </Route>
 
                 <Route exact path="/service">
@@ -59,13 +63,9 @@ class AppRoute extends Component {
                 </Route>
 
 
-
-
                 <Route exact path="/courselist/:id" component={CourseListPage}/>
 
-
                 <Route exact path="/courseDetail/:id" component={CourseDetailPage}/>
-
 
                 <Route exact path="/serviceSingle/:id" component={ServiceSinglePage}/>
 
@@ -94,6 +94,21 @@ class AppRoute extends Component {
                 </Route>
 
                 <Route exact path="/editSlider/:id" component={EditSlider}/>
+
+                <Route exact path="/analytic">
+                    <AnalyticPage/>
+                </Route>
+
+                <Route exact path="/editAnalytic/:id" component={EditAnalytic}/>
+
+                <Route exact path="/adminAbout">
+                    <AdminAboutPage/>
+                </Route>
+
+                <Route exact path="/editAdminAbout/:id" component={EditAbout}/>
+
+
+
 
             </Switch>
         );

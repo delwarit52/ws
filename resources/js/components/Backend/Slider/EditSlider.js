@@ -16,7 +16,6 @@ class EditSlider extends Component {
             sliderlink:'',
             img:'',
             imgvalue:false,
-            hiddenImg:'',
             sliderRedirect:false,
         }
 
@@ -42,7 +41,6 @@ class EditSlider extends Component {
                 cthis.setState({detail:cthis.state.datalist[0].detail});
                 cthis.setState({sliderlink:cthis.state.datalist[0].link});
                 cthis.setState({img:cthis.state.datalist[0].img});
-                cthis.setState({hiddenImg:cthis.state.datalist[0].img});
             })
             .catch(function (error) {
                 console.log(error);
@@ -93,7 +91,7 @@ class EditSlider extends Component {
             let sliderlink = this.state.sliderlink;
             let detail = this.state.detail;
             let img = this.state.img;
-            let hiddenImg=this.state.hiddenImg;
+            let hiddenImg=img;
 
 
             let url='/updateSliderWithImg'
@@ -105,6 +103,7 @@ class EditSlider extends Component {
             data.append('linkData', sliderlink);
             data.append('detail', detail);
             data.append('img', img);
+            data.append('hiddenImg', hiddenImg);
 
 
 

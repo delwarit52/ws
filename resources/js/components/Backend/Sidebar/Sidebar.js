@@ -12,11 +12,9 @@ class Sidebar extends Component {
                         <Nav.Link ><Link  to="/dashboard">Dashboard</Link></Nav.Link>
                         <Nav.Link ><Link  to="/info">Information</Link></Nav.Link>
                         <Nav.Link ><Link  to="/slider">Slider</Link></Nav.Link>
-                        <Nav.Link eventKey="link-1">Link</Nav.Link>
-                        <Nav.Link eventKey="link-2">Link</Nav.Link>
-                        <Nav.Link eventKey="disabled" disabled>
-                            Disabled
-                        </Nav.Link>
+                        <Nav.Link ><Link  to="/analytic">Analytic</Link></Nav.Link>
+                        <Nav.Link ><Link  to="/adminAbout">About</Link></Nav.Link>
+
                     </Nav>
                 </div>
             </Fragment>
