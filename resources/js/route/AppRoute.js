@@ -24,6 +24,10 @@ import AnalyticPage from "../pages/Backend/AnalyticPage";
 import EditAnalytic from "../components/Backend/Analytic/EditAnalytic";
 import AdminAboutPage from "../pages/Backend/AdminAboutPage";
 import EditAbout from "../components/Backend/About/EditAbout";
+import AdminServicePage from "../pages/Backend/AdminServicePage";
+import AddService from "../components/Backend/Service/AddService";
+import EditService from "../components/Backend/Service/EditService";
+import AdminCourseCatPage from "../pages/Backend/AdminCourseCatPage";
 
 class AppRoute extends Component {
     render() {
@@ -36,7 +40,7 @@ class AppRoute extends Component {
                 </Route>
 
                 <Route exact path="/about">
-                    <AdminAboutPage/>
+                    <AboutPage/>
                 </Route>
 
                 <Route exact path="/service">
@@ -107,8 +111,20 @@ class AppRoute extends Component {
 
                 <Route exact path="/editAdminAbout/:id" component={EditAbout}/>
 
+                <Route exact path="/adminService">
+                    <AdminServicePage/>
+                </Route>
+
+                <Route exact path="/addService">
+                    <AddService/>
+                </Route>
+
+                <Route exact path="/editService/:id" component={EditService}/>
 
 
+                <Route exact path="/adminCourseCat">
+                    <AdminCourseCatPage/>
+                </Route>
 
             </Switch>
         );

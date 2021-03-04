@@ -83,6 +83,17 @@ Route::post('/updateAnalyticWithImg',[\App\Http\Controllers\Admin\AnalyticContro
 //About
 Route::get('/adminAbout',[\App\Http\Controllers\Admin\AboutController::class,'adminAbout']);
 Route::post('/editAbout',[\App\Http\Controllers\Admin\AboutController::class,'editAbout']);
+Route::post('/updateAbout',[\App\Http\Controllers\Admin\AboutController::class,'updateAbout']);
+Route::post('/updateAboutWithImg',[\App\Http\Controllers\Admin\AboutController::class,'updateAboutWithImg']);
+
+//Service
+Route::get('/adminService',[\App\Http\Controllers\Admin\ServiceController::class,'service']);
+Route::post('/addService',[\App\Http\Controllers\Admin\ServiceController::class,'addService']);
+Route::post('/editService',[\App\Http\Controllers\Admin\ServiceController::class,'editService']);
+
+Route::post('/updateService',[\App\Http\Controllers\Admin\ServiceController::class,'updateService']);
+Route::post('/updateServiceWithImg',[\App\Http\Controllers\Admin\ServiceController::class,'updateServiceWithImg']);
+Route::post('/deleteService',[\App\Http\Controllers\Admin\ServiceController::class,'deleteService']);
 
 
 Route::get('{AnyRoute}',function(){

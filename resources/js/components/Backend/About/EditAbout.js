@@ -16,6 +16,11 @@ class EditAbout extends Component {
             imgvalue:false,
             aboutRedirect:false,
         }
+
+        this.title=this.title.bind(this);
+        this.detail=this.detail.bind(this);
+        this.files=this.files.bind(this);
+        this.handleForm=this.handleForm.bind(this);
     }
 
 
@@ -143,10 +148,6 @@ class EditAbout extends Component {
         }
 
 
-
-
-
-
         return (
             <Fragment>
                 <TopMenu/>
@@ -160,46 +161,28 @@ class EditAbout extends Component {
                                 <Card.Header><h4>Edit Analytic</h4></Card.Header>
                                 <Card.Body>
                                     {this.props.match.params.id}
-
                                     <Form onSubmit={this.handleForm}>
-
                                         <Row>
-
                                             <Col lg={6} md={6}>
-
-
                                                 <Form.Group controlId="formBasicEmail">
                                                     <Form.Label>Title</Form.Label>
                                                     <Form.Control type="text" defaultValue={this.state.title} onChange={this.title} />
-
                                                 </Form.Group>
-
                                                 <Form.Group controlId="formBasicPassword">
                                                     <Form.Label>Sub Title</Form.Label>
                                                     <Form.Control type="text" defaultValue={this.state.detail} onChange={this.detail} />
                                                 </Form.Group>
-
-
                                             </Col>
-
                                             <Col lg={6} md={6}>
-
-
                                                 <Form.Group controlId="formBasicPassword">
                                                     <Form.Label>Image</Form.Label>
                                                     <Form.Control type="file" onChange={this.files}  />
                                                 </Form.Group>
-
-
-
                                             </Col>
                                         </Row>
-
                                         <Button variant="primary" type="submit">
                                             Save
                                         </Button>
-
-
                                     </Form>
                                 </Card.Body>
                             </Card>
