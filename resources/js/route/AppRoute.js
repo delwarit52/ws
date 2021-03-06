@@ -28,6 +28,10 @@ import AdminServicePage from "../pages/Backend/AdminServicePage";
 import AddService from "../components/Backend/Service/AddService";
 import EditService from "../components/Backend/Service/EditService";
 import AdminCourseCatPage from "../pages/Backend/AdminCourseCatPage";
+import EditCourseCat from "../components/Backend/CourseCat/EditCourseCat";
+import AddCourseCat from "../components/Backend/CourseCat/AddCourseCat";
+import ProjectSummaryPage from "../pages/Backend/ProjectSummaryPage";
+import EditProjectSummary from "../components/Backend/ProjectSummary/EditProjectSummary";
 
 class AppRoute extends Component {
     render() {
@@ -125,6 +129,19 @@ class AppRoute extends Component {
                 <Route exact path="/adminCourseCat">
                     <AdminCourseCatPage/>
                 </Route>
+
+                <Route exact path="/editCourseCat/:id" component={EditCourseCat}/>
+
+                <Route exact path="/addCourseCat">
+                    <AddCourseCat/>
+                </Route>
+
+
+                <Route exact path="/projectSummary">
+                    <ProjectSummaryPage/>
+                </Route>
+                <Route exact path="/editProjectSummary/:id" component={EditProjectSummary}/>
+
 
             </Switch>
         );

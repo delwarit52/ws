@@ -16,6 +16,7 @@ class Sidebar extends Component {
                         <Nav.Link ><Link  to="/adminAbout">About</Link></Nav.Link>
                         <Nav.Link ><Link  to="/adminService">Service</Link></Nav.Link>
                         <Nav.Link ><Link  to="/adminCourseCat">Course Cat</Link></Nav.Link>
+                        <Nav.Link ><Link  to="/projectSummary">Project Summary</Link></Nav.Link>
 
                     </Nav>
                 </div>

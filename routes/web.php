@@ -95,6 +95,22 @@ Route::post('/updateService',[\App\Http\Controllers\Admin\ServiceController::cla
 Route::post('/updateServiceWithImg',[\App\Http\Controllers\Admin\ServiceController::class,'updateServiceWithImg']);
 Route::post('/deleteService',[\App\Http\Controllers\Admin\ServiceController::class,'deleteService']);
 
+//Course
+
+Route::get('/adminCourseCat',[\App\Http\Controllers\Admin\CourseCatController::class,'cat']);
+Route::post('/editCourseCat',[\App\Http\Controllers\Admin\CourseCatController::class,'editCourseCat']);
+Route::post('/updateCourseCat',[\App\Http\Controllers\Admin\CourseCatController::class,'updateCourseCat']);
+Route::post('/updateCourseCatWithImg',[\App\Http\Controllers\Admin\CourseCatController::class,'updateCourseCatWithImg']);
+
+Route::post('/addCourseCat',[\App\Http\Controllers\Admin\CourseCatController::class,'addCourseCat']);
+Route::post('/courseCatDelete',[\App\Http\Controllers\Admin\CourseCatController::class,'courseCatDelete']);
+
+//Project Summary
+Route::get('/projectSummary',[\App\Http\Controllers\Admin\ProjectSummaryController::class,'projectSummary']);
+
+
+
+
 
 Route::get('{AnyRoute}',function(){
     return view('index');

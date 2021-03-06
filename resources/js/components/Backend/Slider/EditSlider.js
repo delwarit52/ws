@@ -170,7 +170,6 @@ class EditSlider extends Component {
 
         let rthis=this;
         if(rthis.state.sliderRedirect){
-
             return <Redirect to='/slider'/>
         }
 

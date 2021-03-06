@@ -90,4 +90,7 @@ class SliderController extends Controller
     }
 
 
+
+
+
 }
