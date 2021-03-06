@@ -107,10 +107,14 @@ Route::post('/courseCatDelete',[\App\Http\Controllers\Admin\CourseCatController:
 
 //Project Summary
 Route::get('/projectSummary',[\App\Http\Controllers\Admin\ProjectSummaryController::class,'projectSummary']);
+Route::post('/editProjectSummaryCat',[\App\Http\Controllers\Admin\ProjectSummaryController::class,'editProjectSummaryCat']);
+Route::post('/updateProjectSummary',[\App\Http\Controllers\Admin\ProjectSummaryController::class,'updateProjectSummary']);
 
-
-
-
+//project Cat
+Route::get('/adminProjectCat',[\App\Http\Controllers\Admin\ProjectCatController::class,'cat']);
+Route::post('/editProjectCat',[\App\Http\Controllers\Admin\ProjectCatController::class,'editCat']);
+Route::post('/updateProjectCat',[\App\Http\Controllers\Admin\ProjectCatController::class,'updateProjectCat']);
+Route::post('/projectCatDelete',[\App\Http\Controllers\Admin\ProjectCatController::class,'projectCatDelete']);
 
 Route::get('{AnyRoute}',function(){
     return view('index');
