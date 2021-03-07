@@ -36,4 +36,13 @@ class ProjectCatController extends Controller
         return $result;
     }
 
+    public function addProjectCat(Request $request){
+        $title=$request->input('title');
+
+        $result=ProjectCatModel::insert([
+            'title'=>$title,
+        ]);
+        return $result;
+    }
+
 }

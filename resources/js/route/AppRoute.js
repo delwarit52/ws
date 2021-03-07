@@ -34,6 +34,9 @@ import ProjectSummaryPage from "../pages/Backend/ProjectSummaryPage";
 import EditProjectSummary from "../components/Backend/ProjectSummary/EditProjectSummary";
 import AdminProjectCatPage from "../pages/Backend/AdminProjectCatPage";
 import EditProjectCat from "../components/Backend/ProjectCat/EditProjectCat";
+import AddProjectCat from "../components/Backend/ProjectCat/AddProjectCat";
+import AdminProjectPage from "../pages/Backend/AdminProjectPage";
+import EditProject from "../components/Backend/Project/EditProject";
 
 class AppRoute extends Component {
     render() {
@@ -150,6 +153,12 @@ class AppRoute extends Component {
                 </Route>
 
                 <Route exact path="/editProjectCat/:id" component={EditProjectCat}/>
+
+                <Route exact path="/adminProject">
+                    <AdminProjectPage/>
+                </Route>
+
+                <Route exact path="/editProject/:id" component={EditProject}/>
 
 
             </Switch>

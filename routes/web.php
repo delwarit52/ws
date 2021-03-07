@@ -115,6 +115,14 @@ Route::get('/adminProjectCat',[\App\Http\Controllers\Admin\ProjectCatController:
 Route::post('/editProjectCat',[\App\Http\Controllers\Admin\ProjectCatController::class,'editCat']);
 Route::post('/updateProjectCat',[\App\Http\Controllers\Admin\ProjectCatController::class,'updateProjectCat']);
 Route::post('/projectCatDelete',[\App\Http\Controllers\Admin\ProjectCatController::class,'projectCatDelete']);
+Route::post('/addProjectCat',[\App\Http\Controllers\Admin\ProjectCatController::class,'addProjectCat']);
+
+//Project
+
+Route::get('/project',[\App\Http\Controllers\Admin\ProjectController::class,'project']);
+
+
+
 
 Route::get('{AnyRoute}',function(){
     return view('index');

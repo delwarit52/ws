@@ -15,7 +15,7 @@ class ProjectCat extends Component {
             editRedirect:false,
         }
 
-        // this.deleteCourseCat=this.deleteCourseCat.bind(this);
+        this.deleteProjectCat=this.deleteProjectCat.bind(this);
         this.editItem=this.editItem.bind(this);
 
     }
@@ -52,7 +52,7 @@ class ProjectCat extends Component {
 
 
 
-    deleteCourseCat(){
+    deleteProjectCat(){
 
         let cthis=this;
 
@@ -112,8 +112,6 @@ class ProjectCat extends Component {
         }
 
 
-
-
         return (
             <Fragment>
                 <Container fluid={true} >
@@ -122,19 +120,20 @@ class ProjectCat extends Component {
                             <Sidebar/>
                         </Col>
                         <Col lg={10}>
+
                             <Card>
+
                                 <Card.Header><h4>Course Category</h4></Card.Header>
                                 <Card.Body>
                                     <Button className="mr-10 editButton" onClick={this.editItem}>Edit</Button>
 
-                                    <Button onClick={this.deleteCourseCat} className={"btn btn-primary mr-10 editButton"} >Delete</Button>
+                                    <Button onClick={this.deleteProjectCat} className={"btn btn-primary mr-10 editButton"} >Delete</Button>
 
-                                    <Link to="/addCourseCat" className={"btn btn-primary editButton"}>Add</Link>
+                                    <Link to="/addProjectCat" className={"btn btn-primary editButton"}>Add</Link>
 
                                     <BootstrapTable keyField='project_cat_id' data={ data } columns={ columns } selectRow={ selectRow }>
 
                                     </BootstrapTable>
-
 
                                 </Card.Body>
                             </Card>
