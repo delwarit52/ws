@@ -44,6 +44,8 @@ import AddCourse from "../components/Backend/CourseList/AddCourse";
 import AdminClientRivew from "../pages/Backend/AdminClientRivew";
 import EditClientReview from "../components/Backend/ClientReview/EditClientReview";
 import AddClientReview from "../components/Backend/ClientReview/AddClientReview";
+import AdminAchivementPage from "../pages/Backend/AdminAchivementPage";
+import AdminTeamPage from "../pages/Backend/AdminTeamPage";
 
 class AppRoute extends Component {
     render() {
@@ -191,6 +193,15 @@ class AppRoute extends Component {
 
                 <Route exact path="/addReview">
                     <AddClientReview/>
+                </Route>
+
+
+                <Route exact path="/adminAchivment">
+                    <AdminAchivementPage/>
+                </Route>
+
+                <Route exact path="/adminTeam">
+                    <AdminTeamPage/>
                 </Route>
 
 

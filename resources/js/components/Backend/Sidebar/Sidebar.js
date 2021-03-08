@@ -20,6 +20,8 @@ class Sidebar extends Component {
                         <Nav.Link ><Link  to="/projectSummary">Project Summary</Link></Nav.Link>
                         <Nav.Link ><Link  to="/adminProject">Project</Link></Nav.Link>
                         <Nav.Link ><Link  to="/adminClientReview">Client Review</Link></Nav.Link>
+                        <Nav.Link ><Link  to="/adminAchivment">Achivment</Link></Nav.Link>
+                        <Nav.Link ><Link  to="/adminTeam">Team</Link></Nav.Link>
 
                     </Nav>
                 </div>

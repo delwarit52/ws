@@ -149,6 +149,14 @@ Route::post('/addReview',[\App\Http\Controllers\Admin\ClientReviewController::cl
 
 
 
+//Achivment
+Route::get('/achivment',[\App\Http\Controllers\Admin\AchivmentController::class,'achivment']);
+Route::post('/updateAchivment',[\App\Http\Controllers\Admin\AchivmentController::class,'updateAchivment']);
+Route::post('/updateAchivmentWithImg',[\App\Http\Controllers\Admin\AchivmentController::class,'updateAchivmentWithImg']);
+
+//Team
+Route::get('/adminTeam',[\App\Http\Controllers\Admin\TeamController::class,'team']);
+
 
 Route::get('{AnyRoute}',function(){
     return view('index');
