@@ -37,6 +37,13 @@ import EditProjectCat from "../components/Backend/ProjectCat/EditProjectCat";
 import AddProjectCat from "../components/Backend/ProjectCat/AddProjectCat";
 import AdminProjectPage from "../pages/Backend/AdminProjectPage";
 import EditProject from "../components/Backend/Project/EditProject";
+import AddProject from "../components/Backend/Project/AddProject";
+import AdminCoursePage from "../pages/Backend/AdminCoursePage";
+import EditCourse from "../components/Backend/CourseList/EditCourse";
+import AddCourse from "../components/Backend/CourseList/AddCourse";
+import AdminClientRivew from "../pages/Backend/AdminClientRivew";
+import EditClientReview from "../components/Backend/ClientReview/EditClientReview";
+import AddClientReview from "../components/Backend/ClientReview/AddClientReview";
 
 class AppRoute extends Component {
     render() {
@@ -159,6 +166,32 @@ class AppRoute extends Component {
                 </Route>
 
                 <Route exact path="/editProject/:id" component={EditProject}/>
+
+                <Route exact path="/addProject">
+                    <AddProject/>
+                </Route>
+
+
+                <Route exact path="/adminCourse">
+                    <AdminCoursePage/>
+                </Route>
+
+                <Route exact path="/editCourse/:id" component={EditCourse}/>
+
+
+                <Route exact path="/addCourse">
+                    <AddCourse/>
+                </Route>
+
+                <Route exact path="/adminClientReview">
+                    <AdminClientRivew/>
+                </Route>
+
+                <Route exact path="/editReview/:id" component={EditClientReview}/>
+
+                <Route exact path="/addReview">
+                    <AddClientReview/>
+                </Route>
 
 
             </Switch>

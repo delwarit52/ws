@@ -16,6 +16,7 @@ class Project extends Component {
         }
 
         this.editItem=this.editItem.bind(this);
+        this.deleteProject=this.deleteProject.bind(this);
     }
 
     componentDidMount() {
@@ -49,6 +50,26 @@ class Project extends Component {
     }
 
 
+    deleteProject(){
+
+        let cthis=this;
+
+        Axios.post('/deleteProject', {
+            id: this.state.rowid,
+        })
+            .then(function (response) {
+                if(response.status==200){
+                    cthis.componentDidMount();
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+    }
+
+
+
 
 
 
@@ -77,6 +98,11 @@ class Project extends Component {
             },
 
             {
+                dataField: 'title',
+                text: 'Category'
+            },
+
+            {
                 dataField: 'url',
                 text: 'Link',
 
@@ -92,7 +118,7 @@ class Project extends Component {
 
         function priceFormatter(cell,row){
 
-            let im=`storage/uploads/slider/${cell}`
+            let im=`storage/uploads/project/${cell}`
             return (
 
                 <img  className={"sliderImg"} src={im}/>
@@ -119,14 +145,14 @@ class Project extends Component {
                         <Col lg={10}>
 
                             <Card>
-                                <Card.Header><h4>Slider</h4></Card.Header>
+                                <Card.Header><h4>Project</h4></Card.Header>
                                 <Card.Body>
 
                                     <Button className="mr-10 editButton" onClick={this.editItem}>Edit</Button>
 
-                                    <Button onClick={this.deleteSlider} className={"btn btn-primary mr-10 editButton"} >Delete</Button>
+                                    <Button onClick={this.deleteProject} className={"btn btn-primary mr-10 editButton"} >Delete</Button>
 
-                                    <Link to="/addSlider" className={"btn btn-primary editButton"}>Add</Link>
+                                    <Link to="/addProject" className={"btn btn-primary editButton"}>Add</Link>
 
                                     <BootstrapTable keyField='project_id' data={ data } columns={ columns } selectRow={ selectRow }>
 

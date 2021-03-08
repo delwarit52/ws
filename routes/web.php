@@ -120,6 +120,32 @@ Route::post('/addProjectCat',[\App\Http\Controllers\Admin\ProjectCatController::
 //Project
 
 Route::get('/project',[\App\Http\Controllers\Admin\ProjectController::class,'project']);
+Route::post('/editProject',[\App\Http\Controllers\Admin\ProjectController::class,'editProject']);
+Route::post('/updateProject',[\App\Http\Controllers\Admin\ProjectController::class,'updateProject']);
+Route::post('/updateProjectWithImg',[\App\Http\Controllers\Admin\ProjectController::class,'updateProjectWithImg']);
+Route::post('/addProject',[\App\Http\Controllers\Admin\ProjectController::class,'addProject']);
+Route::post('/deleteProject',[\App\Http\Controllers\Admin\ProjectController::class,'deleteProject']);
+
+
+//Course
+Route::get('/course',[\App\Http\Controllers\Admin\CourseController::class,'course']);
+Route::post('/editCourse',[\App\Http\Controllers\Admin\CourseController::class,'editCourse']);
+Route::post('/updateCourse',[\App\Http\Controllers\Admin\CourseController::class,'updateCourse']);
+Route::post('/updateCourseWithImg',[\App\Http\Controllers\Admin\CourseController::class,'updateCourseWithImg']);
+Route::post('/deleteCourse',[\App\Http\Controllers\Admin\CourseController::class,'deleteCourse']);
+
+Route::post('/addCourse',[\App\Http\Controllers\Admin\CourseController::class,'addCourse']);
+
+
+//Review
+
+Route::get('/review',[\App\Http\Controllers\Admin\ClientReviewController::class,'review']);
+Route::post('/editReview',[\App\Http\Controllers\Admin\ClientReviewController::class,'editReview']);
+Route::post('/updateReview',[\App\Http\Controllers\Admin\ClientReviewController::class,'updateReview']);
+Route::post('/updateReviewWithImg',[\App\Http\Controllers\Admin\ClientReviewController::class,'updateReviewWithImg']);
+
+Route::post('/deleteReview',[\App\Http\Controllers\Admin\ClientReviewController::class,'deleteReview']);
+Route::post('/addReview',[\App\Http\Controllers\Admin\ClientReviewController::class,'addReview']);
 
 
 
