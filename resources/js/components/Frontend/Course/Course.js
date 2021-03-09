@@ -51,12 +51,13 @@ class Course extends Component {
 
         let dthis=this;
         let datali=dthis.state.datalist;
+        let im='storage/uploads/courseCat/';
 
         let listData=datali.map((d)=>
             <Col lg={6} md={6} sm={12} className="courseItemListCol p-0">
                 <Link to="/courselist">
                     <div className={"courseItemList text-center"}>
-                        <Image src={design}></Image>
+                        <Image src={im+d.img}></Image>
                         <h3> {d.title}</h3>
                     </div>
                 </Link>

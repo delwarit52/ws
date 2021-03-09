@@ -33,12 +33,13 @@ class Service extends Component {
     render() {
         let dthis=this;
         let datali=dthis.state.datalist;
+        let im='storage/uploads/service/';
 
         let listData=datali.map((d)=>
             <Col lg={3} className="serviceItemCol p-0">
                 <a href="#">
                     <div className="serviceItem">
-                        <Image src={graphics}></Image>
+                        <Image src={im+d.img}></Image>
                         <h3>{d.title}</h3>
                     </div>
                 </a>

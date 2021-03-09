@@ -10,6 +10,7 @@ class Sidebar extends Component {
                     <Nav defaultActiveKey="/home" className="flex-column">
 
                         <Nav.Link ><Link  to="/dashboard">Dashboard</Link></Nav.Link>
+                        <Nav.Link ><Link  to="/logo">Logo</Link></Nav.Link>
                         <Nav.Link ><Link  to="/info">Information</Link></Nav.Link>
                         <Nav.Link ><Link  to="/slider">Slider</Link></Nav.Link>
                         <Nav.Link ><Link  to="/analytic">Analytic</Link></Nav.Link>

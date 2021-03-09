@@ -11,7 +11,8 @@ class HomeAboutUs extends Component {
         this.state={
             datalist:[],
             aboutTitle:'',
-            aboutDetail:''
+            aboutDetail:'',
+            img:''
         }
     }
 
@@ -23,6 +24,7 @@ class HomeAboutUs extends Component {
                 cthis.setState({datalist:respose.data})
                 cthis.setState({aboutTitle:cthis.state.datalist[0].title})
                 cthis.setState({aboutDetail:cthis.state.datalist[0].detail})
+                cthis.setState({img:cthis.state.datalist[0].img})
 
             })
             .catch(function(error){
@@ -31,6 +33,8 @@ class HomeAboutUs extends Component {
 
 
     render() {
+
+        let im='storage/uploads/about/';
         return (
             <Fragment>
                 <section className={"sectionMarginPadding"}>
@@ -38,7 +42,7 @@ class HomeAboutUs extends Component {
                 <Row>
                     <Col>
                         <div className="aboutImage">
-                            <img src={AboutImg}/>
+                            <img src={im+this.state.img}/>
                         </div>
                     </Col>
                     <Col>

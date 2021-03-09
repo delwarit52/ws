@@ -30,12 +30,13 @@ class SiteAnalytic extends Component {
 
         let dthis=this;
         let datas=dthis.state.datalist;
+        let im='storage/uploads/analytic/';
 
 
         const listItems = datas.map((d) =>
             <Col className={"siteAnalyticCol p-0"}>
                 <div className="text-center siteAnalyticItem">
-                    <img src={user}/>
+                    <img src={im+d.img}/>
                     <h3>{d.total}+</h3>
                     <h4>{d.title}</h4>
                 </div>

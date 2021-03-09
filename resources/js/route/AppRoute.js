@@ -46,6 +46,10 @@ import EditClientReview from "../components/Backend/ClientReview/EditClientRevie
 import AddClientReview from "../components/Backend/ClientReview/AddClientReview";
 import AdminAchivementPage from "../pages/Backend/AdminAchivementPage";
 import AdminTeamPage from "../pages/Backend/AdminTeamPage";
+import EditTeam from "../components/Backend/Team/EditTeam";
+import AddTeam from "../components/Backend/Team/AddTeam";
+import AdminLogoPage from "../pages/Backend/AdminLogoPage";
+import EditLogo from "../components/Backend/Logo/EditLogo";
 
 class AppRoute extends Component {
     render() {
@@ -102,6 +106,12 @@ class AppRoute extends Component {
                 <Route exact path="/dashboard">
                     <DashboardPage/>
                 </Route>
+
+                <Route exact path="/logo">
+                    <AdminLogoPage/>
+                </Route>
+
+                <Route exact path="/editLogo/:id" component={EditLogo}/>
 
                 <Route exact path="/info">
                     <InfoPage/>
@@ -203,6 +213,15 @@ class AppRoute extends Component {
                 <Route exact path="/adminTeam">
                     <AdminTeamPage/>
                 </Route>
+
+
+                <Route exact path="/editTeam/:id" component={EditTeam}/>
+
+                <Route exact path="/addTeam">
+                    <AddTeam/>
+                </Route>
+
+
 
 
             </Switch>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\SliderModel;
 use Illuminate\Http\Request;
 
 use App\Models\Admin\InfoModel;
@@ -21,6 +22,11 @@ class HomeController extends Controller
     public function home_info(){
          $result=InfoModel::all();
                 return $result;
+    }
+
+    public function home_slider(){
+        $result=SliderModel::all();
+        return $result;
     }
 
       public function home_analytic(){

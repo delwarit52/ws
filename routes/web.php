@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 
 Route::get('/home_info',[\App\Http\Controllers\Frontend\HomeController::class,'home_info']);
+Route::get('/home_slider',[\App\Http\Controllers\Frontend\HomeController::class,'home_slider']);
 Route::get('/home_analytic',[\App\Http\Controllers\Frontend\HomeController::class,'home_analytic']);
 Route::get('/home_about',[\App\Http\Controllers\Frontend\HomeController::class,'home_about']);
 Route::get('/home_service',[\App\Http\Controllers\Frontend\HomeController::class,'home_service']);
@@ -156,6 +157,18 @@ Route::post('/updateAchivmentWithImg',[\App\Http\Controllers\Admin\AchivmentCont
 
 //Team
 Route::get('/adminTeam',[\App\Http\Controllers\Admin\TeamController::class,'team']);
+Route::post('/editTeam',[\App\Http\Controllers\Admin\TeamController::class,'editTeam']);
+Route::post('/updateTeam',[\App\Http\Controllers\Admin\TeamController::class,'updateTeam']);
+Route::post('/updateTeamWithImg',[\App\Http\Controllers\Admin\TeamController::class,'updateTeamWithImg']);
+Route::post('/teamDelete',[\App\Http\Controllers\Admin\TeamController::class,'teamDelete']);
+Route::post('/addTeam',[\App\Http\Controllers\Admin\TeamController::class,'addTeam']);
+
+
+//Logo
+Route::get('/adminlogo',[\App\Http\Controllers\Admin\LogoController::class,'logo']);
+Route::post('/editLogo',[\App\Http\Controllers\Admin\LogoController::class,'editLogo']);
+
+Route::post('/updateLogo',[\App\Http\Controllers\Admin\LogoController::class,'updateLogo']);
 
 
 Route::get('{AnyRoute}',function(){
