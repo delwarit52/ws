@@ -19,6 +19,7 @@ class HomeSlider extends Component {
         Axios.get('/home_slider')
             .then(function (response) {
                 cthis.setState({datalist:response.data});
+
             })
             .catch(function (error) {
                 // handle error

@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 
 Route::get('/home_info',[\App\Http\Controllers\Frontend\HomeController::class,'home_info']);
+Route::get('/home_logo',[\App\Http\Controllers\Frontend\HomeController::class,'home_logo']);
 Route::get('/home_slider',[\App\Http\Controllers\Frontend\HomeController::class,'home_slider']);
 Route::get('/home_analytic',[\App\Http\Controllers\Frontend\HomeController::class,'home_analytic']);
 Route::get('/home_about',[\App\Http\Controllers\Frontend\HomeController::class,'home_about']);

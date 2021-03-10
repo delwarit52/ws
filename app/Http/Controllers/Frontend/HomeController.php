@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\LogoModel;
 use App\Models\Admin\SliderModel;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,11 @@ class HomeController extends Controller
 
     public function home_slider(){
         $result=SliderModel::all();
+        return $result;
+    }
+
+    public function home_logo(){
+        $result=LogoModel::where('position',0)->get();
         return $result;
     }
 

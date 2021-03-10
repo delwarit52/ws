@@ -8,11 +8,14 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import Axios from "axios";
 
 class TopMenu extends Component {
     constructor() {
         super();
         this.state={
+            datalist:[],
+            logo:'',
             topMenuClass:'topMenu',
             topMenuLink:'topMenuLink'
         }
@@ -31,7 +34,27 @@ class TopMenu extends Component {
     }
 
 
+
+    componentDidMount() {
+        let cthis=this;
+        Axios.get('/home_logo')
+            .then(function (response) {
+                cthis.setState({datalist:response.data});
+                cthis.setState({logo:cthis.state.datalist[0].image});
+
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+
+    }
+
+
+
     render() {
+        let im='storage/uploads/logo/';
+
 
         window.addEventListener("scroll", this.onScroll)
 
@@ -39,7 +62,7 @@ class TopMenu extends Component {
             <Fragment>
                 <TopBar/>
                 <Navbar className={this.state.topMenuClass} collapseOnSelect  expand="lg"  variant="dark">
-                    <Navbar.Brand href="#home"><img src={Logo}/> </Navbar.Brand>
+                    <Navbar.Brand href="#home"><img src={im+this.state.logo}/> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
