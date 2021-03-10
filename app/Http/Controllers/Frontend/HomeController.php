@@ -46,12 +46,12 @@ class HomeController extends Controller
                 }
 
      public function home_service(){
-               $result=ServiceModel::all();
+               $result=ServiceModel::limit(8)->get();
                return $result;
          }
 
           public function home_course_cat(){
-                        $result=CourseCatModel::all();
+                        $result=CourseCatModel::limit(4)->get();
                         return $result;
                   }
 
@@ -67,7 +67,7 @@ class HomeController extends Controller
           }
 
               public function home_project(){
-                                $result=ProjectModel::all();
+                                $result=ProjectModel::limit(4)->get();
                                        return $result;
                     }
 
